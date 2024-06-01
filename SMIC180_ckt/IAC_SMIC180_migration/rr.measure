@@ -1,0 +1,23 @@
+Exported variables from results directory:  /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/IAC_SMIC180_migration/IAC_RR_5_500pF_2024_05_14_09_49.raw/
+
+date               :  6:07:02 PM, Thur May 23, 2024
+design             :  (no title)
+simulator          :  spectre
+version            :  20.1.0.073.isr1
+
+
+Measurement Name   :  CMRRmeas
+Analysis Type      :  ac
+CMRR_ac               =  65.7364 
+CMRR_dc               =  65.7365 
+
+
+Measurement Name   :  PSRRmeas
+Analysis Type      :  ac
+PSRR_ac               =  53.8991 
+PSRR_dc               =  62.7173 
+
+
+
+
+

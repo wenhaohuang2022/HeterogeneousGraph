@@ -1,0 +1,5 @@
+$ Simulator: spectre (ver. 20.1.0.073.isr1)
+.title '(no title)'
+gm2 gm3 GBW_VOUT UGB PM_VOUT GM_VOUT DC_gain alter# 
+6.63885e-05 0.0099964 5.20116e+06 6.02499e+06 76.0679 -8.86735 85.357 1 
+

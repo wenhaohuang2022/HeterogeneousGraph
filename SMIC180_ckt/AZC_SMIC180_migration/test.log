@@ -1,0 +1,3334 @@
+
+Spectre (R) Circuit Simulator
+Version 20.1.0.073.isr1 64bit -- 14 Oct 2020
+Copyright (C) 1989-2020 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: lcj   Host: dgx2   HostID: A0A0307   PID: 37069
+Memory  available: 236.3485 GB  physical: 473.1103 GB
+Linux   : CentOS Linux release 7.9.2009 (Core)
+CPU Type: Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz
+        Socket: Processors [Frequency] (Hyperthreaded Processor)
+        0:       0 [1238.0] ( 40 ),  1 [1386.1] ( 41 ),  2 [1288.3] ( 42 )
+                 3 [1396.6] ( 43 ),  4 [1285.6] ( 44 ),  5 [1220.6] ( 45 )
+                 6 [1200.4] ( 46 ),  7 [1267.3] ( 47 ),  8 [1215.7] ( 48 )
+                 9 [1231.7] ( 49 ), 10 [1200.3] ( 50 ), 11 [1200.7] ( 51 )
+                12 [1199.8] ( 52 ), 13 [1200.3] ( 53 ), 14 [1288.0] ( 54 )
+                15 [1200.2] ( 55 ), 16 [1285.4] ( 56 ), 17 [1204.1] ( 57 )
+                18 [1200.3] ( 58 ), 19 [1200.2] ( 59 )
+        1:      20 [1201.0] ( 60 ), 21 [1234.5] ( 61 ), 22 [2163.3] ( 62 )
+                23 [1279.4] ( 63 ), 24 [1251.2] ( 64 ), 25 [1255.0] ( 65 )
+                26 [1200.3] ( 66 ), 27 [1200.4] ( 67 ), 28 [1201.8] ( 68 )
+                29 [1200.0] ( 69 ), 30 [1200.3] ( 70 ), 31 [1200.0] ( 71 )
+                32 [1200.6] ( 72 ), 33 [1200.3] ( 73 ), 34 [1200.4] ( 74 )
+                35 [1206.8] ( 75 ), 36 [1217.2] ( 76 ), 37 [1300.2] ( 77 )
+                38 [1200.2] ( 78 ), 39 [1200.2] ( 79 )
+        
+System load averages (1min, 5min, 15min) : 7.9 %, 11.7 %, 12.1 %
+Hyperthreading is enabled
+
+
+Simulating `./test.scs' on dgx2 at 12:04:24 PM, Tue May 28, 2024 (process id: 37069).
+Current working directory: /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/AZC_SMIC180_migration
+Command line:
+    /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/bin/spectre  \
+        -64 =mdl ./folded_cascode_da_1_1pF.mdl ./test.scs
+
+Loading /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/cmi/lib/64bit/5.0/libphilips_o_sh.so ...
+Loading /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+Loading /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/spectre/lib/64bit/mdl/libSpectreEH_sh.so ...
+Reading file:  /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/AZC_SMIC180_migration/folded_cascode_da_1_1pF.mdl
+Reading file:  /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/AZC_SMIC180_migration/test.scs
+Reading file:  /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_mis_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/pnp18a100_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/pnp18a25_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/pnp18a4_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/npn18a100_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/npn18a25_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/npn18a4_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/pnp33a100_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/pnp33a25_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/pnp33a4_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/npn33a100_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/npn33a25_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/bjt/npn33a4_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_bjt_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_dio_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_res_spe.ckt
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_res_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_mim_spe.ckt
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_mim_spe.mdl
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_var_spe.ckt
+Reading file:  /home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/gc.va
+Reading link:  /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/spectre/etc/ahdl/constants.h
+Reading file:  /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/spectre/etc/ahdl/constants.vams
+Reading link:  /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/spectre/etc/ahdl/discipline.h
+Reading file:  /home/public/tools/cadence/SPECTRE20.10.073/tools.lnx86/spectre/etc/ahdl/disciplines.vams
+Time for NDB Parsing: CPU = 525.619 ms, elapsed = 393.293 ms.
+Time accumulated: CPU = 612.249 ms, elapsed = 393.303 ms.
+Peak resident memory used = 82.7 Mbytes.
+
+
+Warning from spectre during hierarchy flattening.
+    WARNING (SFE-884): "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib" 27: The option 'gmin' is deleted because it is redefined at '/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib':line '7099'.
+
+Time for Elaboration: CPU = 36.228 ms, elapsed = 18.1231 ms.
+Time accumulated: CPU = 648.779 ms, elapsed = 411.601 ms.
+Peak resident memory used = 89.8 Mbytes.
+
+
+Time for EDB Visiting: CPU = 1.685 ms, elapsed = 844.955 us.
+Time accumulated: CPU = 650.8 ms, elapsed = 412.621 ms.
+Peak resident memory used = 90.7 Mbytes.
+
+
+Global user options:
+               gmin = 1e-16
+
+Scoped user options:
+
+Circuit inventory:
+              nodes 23
+              bsim4 24    
+          capacitor 3     
+             iprobe 1     
+            isource 1     
+           resistor 5     
+            vsource 3     
+
+Analysis and control statement inventory:
+
+Output statements:
+             .probe 0     
+           .measure 0     
+               save 0     
+
+Time for parsing: CPU = 5.146 ms, elapsed = 2.95806 ms.
+Time accumulated: CPU = 656.266 ms, elapsed = 415.746 ms.
+Peak resident memory used = 92.3 Mbytes.
+
+~~~~~~~~~~~~~~~~~~~~~~
+Pre-Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+********************************************************
+Stability Analysis `stbmeas': freq = (100 mHz -> 10 GHz)
+********************************************************
+
+Warning from spectre during STB analysis `stbmeas', during task `MDLControl'.
+    WARNING (SFE-421): Undefined parameter name `VOUT'.
+    WARNING (SFE-421): Undefined parameter name `VINN'.
+    WARNING (SFE-421): Undefined parameter name `VOUT'.
+    WARNING (SFE-421): Undefined parameter name `VINN'.
+    WARNING (SFE-421): Undefined parameter name `VOUT'.
+        Further occurrences of this warning will be suppressed.
+Notice from spectre during DC analysis, during STB analysis `stbmeas', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+
+DC simulation time: CPU = 7.829 ms, elapsed = 3.91912 ms.
+..................9..................8..................7..................6..................5..................4..................3..................2..................1..................0
+Gain margin = 19.3876 dB at frequency = 11.7038 MHz.
+Phase margin = 59.4244 Deg at frequency = 2.74885 MHz.
+Accumulated DC solution time =            10 ms.
+Intrinsic stb analysis time =              10 ms.
+Total time required for stb analysis `stbmeas': CPU = 21.129 ms, elapsed = 11.162 ms.
+Time accumulated: CPU = 685.678 ms, elapsed = 431.104 ms.
+Peak resident memory used = 94.4 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    7 warnings suppressed.
+
+
+********************
+DC Analysis `dcmeas'
+********************
+
+Notice from spectre during DC analysis `dcmeas', during task `MDLControl'.
+    No outputs were found. Loosening output filter criterion to `allpub'.
+
+
+Opening the PSF file ./test.raw/dcmeas.dc ...
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 100 aS
+
+Maximum value achieved for any signal of each quantity: 
+V: V(VDD) = 1.8 V
+I: I(V1:p) = 95.43 uA
+
+Notice from spectre during info, during DC analysis `dcmeas', during task `MDLControl'.
+    No outputs were found. Loosening output filter criterion to `allpub'.
+
+*************************************
+Operating-Point information `dcmeas':
+*************************************
+Operating point computed in DC analysis `dcmeas' at T = 27 C.
+
+    V(IBIAS) = 683.871 mV
+    I(IPRB0:in) = 600.37 aA
+    I(V0:p) = 95.4322 uA
+    I(V1:p) = -95.4322 uA
+    I(V2:p) = 600.868 aA
+    V(VDD) = 1.8 V
+    V(VINN) = 900.072 mV
+    V(VINP) = 900 mV
+    V(VOUT) = 900.072 mV
+    V(VSS) = 0 V
+    V(I1.IBIAS2) = 483.871 mV
+    V(I1.IBIASP1) = 1.18437 V
+    V(I1.IBIASP2) = 983.209 mV
+    V(I1.net031) = 664.638 mV
+    V(I1.net046) = 1.34533 V
+    V(I1.net050) = 1.2502 V
+    V(I1.net052) = 1.25426 V
+    V(I1.net053) = 539.318 mV
+    V(I1.net055) = 1.06034 V
+    V(I1.net057) = 1.0602 V
+    V(I1.net118) = 1.51118 V
+    V(I1.net125) = 664.638 mV
+    V(I1.net134) = 499.064 mV
+    V(I1.net135) = 499.093 mV
+    V(I1.net139) = 1.63705 V
+    V(I1.net140) = 171.942 mV
+    V(I1.net141) = 164.266 mV
+
+
+Most positive signals:
+    V(VDD) = 1.8 V
+    I(V0:p) = 95.4322 uA
+
+Most negative signals:
+    I(V1:p) = -95.4322 uA
+
+Smallest signals:
+    V(VSS) = 0 V
+    I(IPRB0:in) = 600.37 aA
+
+
+Instance: I1.NM0 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net135) = 499.093 mV
+          g : V(I1.IBIAS2) = 483.871 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 1.93401 uA
+        vgs = 483.871 mV
+        vds = 499.093 mV
+        vbs = 0 V
+        vgd = -15.2211 mV
+        vdb = 499.093 mV
+        vgb = 483.871 mV
+        vth = 482.531 mV
+      vdsat = 76.3575 mV
+         gm = 35.6476 uS
+        gds = 240.377 nS
+       gmbs = 9.97784 uS
+    betaeff = 1.16956 mA/V^2
+        cjd = 1.10014 fF
+        cjs = 1.33605 fF
+        cgg = 2.48715 fF
+        cgd = -464.834 aF
+        cgs = -1.57024 fF
+        cgb = -452.079 aF
+        cdg = -940.971 aF
+        cdd = 464.886 aF
+        cds = 616.497 aF
+        cdb = -140.413 aF
+        csg = -1.1929 fF
+        csd = -110.618e-21 F
+        css = 1.40297 fF
+        csb = -209.956 aF
+        cbg = -353.283 aF
+        cbd = 57.724e-21 F
+        cbs = -449.223 aF
+        cbb = 802.448 aF
+     covlgs = 480.398 aF/m
+     covlgd = 464.462 aF/m
+     covlgb = 0 F/m
+      cggbo = 1.54229 fF
+      cgdbo = -371.542e-21 F
+      cgsbo = -1.08984 fF
+      cbgbo = -353.283 aF
+      cbdbo = 57.724e-21 F
+      cbsbo = -449.223 aF
+      cdgbo = -476.509 aF
+      cddbo = 424.436e-21 F
+      cdsbo = 616.497 aF
+        ron = 258.061 kOhm
+         id = 1.93401 uA
+      ibulk = -12.1456 fA
+        pwr = 965.249 nW
+   gmoverid = 18.432 1/V
+       ueff = 39.9454e-03
+      rdeff = 1.55219 Ohm
+      rseff = 1.55219 Ohm
+       rgbd = 0 Ohm
+      igidl = 0 A
+      igisl = 0 A
+       igdt = 35.8623 fA
+        igd = -179.208 aA
+        igs = 36.0407 fA
+        igb = 481.617e-24 A
+     igbacc = 364.083e-36 A
+     igbinv = 481.617e-24 A
+       igcs = 427.108e-21 A
+       igcd = 416.766e-21 A
+       isub = 6.74329e-21 A
+        gbs = 51.901 fS
+        gbd = 35.6259 fS
+         qg = 1.68321 fCoul
+         qd = -46.2455 aCoul
+         qs = -127.046 aCoul
+         qb = -1.50992 fCoul
+        qjd = -601.8 aCoul
+        qjs = -4.01077e-21 Coul
+     qgdovl = 899.671e-21 Coul
+     qgsovl = 59.2122 aCoul
+        qgi = 1.68321 fCoul
+        qdi = -46.2455 aCoul
+        qsi = -127.046 aCoul
+        qbi = -1.50992 fCoul
+        ide = 1.93401 uA
+        ige = 35.8623 fA
+        ise = -1.93401 uA
+        ibe = -12.1955 fA
+        idb = 12.1953 fA
+        isb = 155.804e-21 A
+        vsb = -0 V
+        gmb = 9.97784 uS
+        vgt = 1.34008 mV
+       vdss = 76.3575 mV
+  vsat_marg = 422.735 mV
+  self_gain = 148.299
+       rout = 4.16012 MOhm
+       beff = 2.15392 A/V^2
+        fug = 2.28112 GHz
+      rgate = 0 Ohm
+     vearly = 8.04571 V
+
+Instance: I1.NM1 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net134) = 499.064 mV
+          g : V(I1.IBIAS2) = 483.871 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 1.934 uA
+        vgs = 483.871 mV
+        vds = 499.064 mV
+        vbs = 0 V
+        vgd = -15.1923 mV
+        vdb = 499.064 mV
+        vgb = 483.871 mV
+        vth = 482.531 mV
+      vdsat = 76.3575 mV
+         gm = 35.6475 uS
+        gds = 240.386 nS
+       gmbs = 9.9778 uS
+    betaeff = 1.16956 mA/V^2
+        cjd = 1.10015 fF
+        cjs = 1.33605 fF
+        cgg = 2.48716 fF
+        cgd = -464.837 aF
+        cgs = -1.57024 fF
+        cgb = -452.079 aF
+        cdg = -940.974 aF
+        cdd = 464.889 aF
+        cds = 616.497 aF
+        cdb = -140.413 aF
+        csg = -1.1929 fF
+        csd = -110.589e-21 F
+        css = 1.40297 fF
+        csb = -209.956 aF
+        cbg = -353.283 aF
+        cbd = 57.7106e-21 F
+        cbs = -449.223 aF
+        cbb = 802.448 aF
+     covlgs = 480.398 aF/m
+     covlgd = 464.465 aF/m
+     covlgb = 0 F/m
+      cggbo = 1.54229 fF
+      cgdbo = -371.664e-21 F
+      cgsbo = -1.08984 fF
+      cbgbo = -353.283 aF
+      cbdbo = 57.7106e-21 F
+      cbsbo = -449.223 aF
+      cdgbo = -476.509 aF
+      cddbo = 424.542e-21 F
+      cdsbo = 616.497 aF
+        ron = 258.047 kOhm
+         id = 1.934 uA
+      ibulk = -12.1446 fA
+        pwr = 965.19 nW
+   gmoverid = 18.432 1/V
+       ueff = 39.9454e-03
+      rdeff = 1.55219 Ohm
+      rseff = 1.55219 Ohm
+       rgbd = 0 Ohm
+      igidl = 0 A
+      igisl = 0 A
+       igdt = 35.8628 fA
+        igd = -178.764 aA
+        igs = 36.0407 fA
+        igb = 481.617e-24 A
+     igbacc = 364.083e-36 A
+     igbinv = 481.617e-24 A
+       igcs = 427.108e-21 A
+       igcd = 416.766e-21 A
+       isub = 6.74281e-21 A
+        gbs = 51.901 fS
+        gbd = 35.6243 fS
+         qg = 1.68321 fCoul
+         qd = -46.2485 aCoul
+         qs = -127.046 aCoul
+         qb = -1.50992 fCoul
+        qjd = -601.769 aCoul
+        qjs = -4.01075e-21 Coul
+     qgdovl = 902.694e-21 Coul
+     qgsovl = 59.2122 aCoul
+        qgi = 1.68321 fCoul
+        qdi = -46.2485 aCoul
+        qsi = -127.046 aCoul
+        qbi = -1.50992 fCoul
+        ide = 1.934 uA
+        ige = 35.8628 fA
+        ise = -1.934 uA
+        ibe = -12.1945 fA
+        idb = 12.1943 fA
+        isb = 155.804e-21 A
+        vsb = -0 V
+        gmb = 9.9778 uS
+        vgt = 1.34007 mV
+       vdss = 76.3575 mV
+  vsat_marg = 422.706 mV
+  self_gain = 148.293
+       rout = 4.15998 MOhm
+       beff = 2.15394 A/V^2
+        fug = 2.28111 GHz
+      rgate = 0 Ohm
+     vearly = 8.04541 V
+
+Instance: I1.NM2 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net050) = 1.2502 V
+          g : V(I1.net055) = 1.06034 V
+          s : V(I1.net134) = 499.064 mV
+          b : V(VSS) = 0 V
+     region = subth
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 758.408 nA
+        vgs = 561.278 mV
+        vds = 751.134 mV
+        vbs = -499.064 mV
+        vgd = -189.856 mV
+        vdb = 1.2502 V
+        vgb = 1.06034 V
+        vth = 606.13 mV
+      vdsat = 65.4528 mV
+         gm = 14.6448 uS
+        gds = 279.339 nS
+       gmbs = 3.04183 uS
+    betaeff = 846.963 uA/V^2
+        cjd = 278.88 aF
+        cjs = 333.953 aF
+        cgg = 374.817 aF
+        cgd = -125.806 aF
+        cgs = -207.864 aF
+        cgb = -41.1469 aF
+        cdg = -159.705 aF
+        cdd = 126.034 aF
+        cds = 40.8812 aF
+        cdb = -7.21024 aF
+        csg = -186.309 aF
+        csd = -458.226e-21 F
+        css = 197.569 aF
+        csb = -10.8014 aF
+        cbg = -28.8031 aF
+        cbd = 230.09e-21 F
+        cbs = -30.5855 aF
+        cbb = 59.1585 aF
+     covlgs = 136.311 aF/m
+     covlgd = 126.329 aF/m
+     covlgb = 0 F/m
+      cggbo = 112.177 aF
+      cgdbo = 523.633e-21 F
+      cgsbo = -71.5537 aF
+      cbgbo = -28.8031 aF
+      cbdbo = 230.09e-21 F
+      cbsbo = -30.5855 aF
+      cdgbo = -33.3754 aF
+      cddbo = -295.496e-21 F
+      cdsbo = 40.8812 aF
+        ron = 990.408 kOhm
+         id = 758.408 nA
+      ibulk = -27.382 fA
+        pwr = 569.666 nW
+   gmoverid = 19.3099 1/V
+       ueff = 49.4359e-03
+      rdeff = 5.82955 Ohm
+      rseff = 5.82955 Ohm
+       rgbd = 0 Ohm
+      igidl = 128.854e-51 A
+      igisl = 0 A
+       igdt = 51.3297 fA
+        igd = -11.3037 fA
+        igs = 62.6332 fA
+        igb = 379.034e-24 A
+     igbacc = 106.757e-36 A
+     igbinv = 379.034e-24 A
+       igcs = 137.776e-21 A
+       igcd = 134.942e-21 A
+       isub = 258.652 aA
+        gbs = 31.6297 fS
+        gbd = 28.4989 fS
+         qg = 192.517 aCoul
+         qd = 1.18334 aCoul
+         qs = -24.4005 aCoul
+         qb = -169.3 aCoul
+        qjd = -409.923 aCoul
+        qjs = -181.864 aCoul
+     qgdovl = -4.48564 aCoul
+     qgsovl = 19.4529 aCoul
+        qgi = 192.517 aCoul
+        qdi = 1.18334 aCoul
+        qsi = -24.4005 aCoul
+        qbi = -169.3 aCoul
+        ide = 758.408 nA
+        ige = 51.3297 fA
+        ise = -758.408 nA
+        ibe = -27.5569 fA
+        idb = 16.4703 fA
+        isb = 10.828 fA
+        vsb = 499.064 mV
+        gmb = 3.04183 uS
+        vgt = -44.852 mV
+       vdss = 65.4528 mV
+  vsat_marg = 685.681 mV
+  self_gain = 52.4264
+       rout = 3.57988 MOhm
+       beff = 753.996 uA/V^2
+        fug = 6.21846 GHz
+      rgate = 0 Ohm
+     vearly = 2.71501 V
+
+Instance: I1.NM3 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net052) = 1.25426 V
+          g : V(I1.net057) = 1.0602 V
+          s : V(I1.net135) = 499.093 mV
+          b : V(VSS) = 0 V
+     region = subth
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 757.009 nA
+        vgs = 561.111 mV
+        vds = 755.171 mV
+        vbs = -499.093 mV
+        vgd = -194.06 mV
+        vdb = 1.25426 V
+        vgb = 1.0602 V
+        vth = 606.103 mV
+      vdsat = 65.4172 mV
+         gm = 14.6211 uS
+        gds = 278.438 nS
+       gmbs = 3.03682 uS
+    betaeff = 846.966 uA/V^2
+        cjd = 278.659 aF
+        cjs = 333.95 aF
+        cgg = 374.626 aF
+        cgd = -125.68 aF
+        cgs = -207.783 aF
+        cgb = -41.1631 aF
+        cdg = -159.542 aF
+        cdd = 125.908 aF
+        cds = 40.8366 aF
+        cdb = -7.20221 aF
+        csg = -186.255 aF
+        csd = -457.826e-21 F
+        css = 197.502 aF
+        csb = -10.7895 aF
+        cbg = -28.8285 aF
+        cbd = 229.878e-21 F
+        cbs = -30.5562 aF
+        cbb = 59.1548 aF
+     covlgs = 136.31 aF/m
+     covlgd = 126.203 aF/m
+     covlgb = 0 F/m
+      cggbo = 112.112 aF
+      cgdbo = 523.354e-21 F
+      cgsbo = -71.4723 aF
+      cbgbo = -28.8285 aF
+      cbdbo = 229.878e-21 F
+      cbsbo = -30.5562 aF
+      cdgbo = -33.339 aF
+      cddbo = -295.406e-21 F
+      cdsbo = 40.8366 aF
+        ron = 997.572 kOhm
+         id = 757.009 nA
+      ibulk = -27.5378 fA
+        pwr = 571.671 nW
+   gmoverid = 19.3142 1/V
+       ueff = 49.436e-03
+      rdeff = 5.82955 Ohm
+      rseff = 5.82955 Ohm
+       rgbd = 0 Ohm
+      igidl = 134.758e-51 A
+      igisl = 0 A
+       igdt = 50.8715 fA
+        igd = -11.732 fA
+        igs = 62.6032 fA
+        igb = 378.6e-24 A
+     igbacc = 106.743e-36 A
+     igbinv = 378.6e-24 A
+       igcs = 137.637e-21 A
+       igcd = 134.808e-21 A
+       isub = 297.805 aA
+        gbs = 31.6312 fS
+        gbd = 28.6563 fS
+         qg = 192.393 aCoul
+         qd = 1.29029 aCoul
+         qs = -24.388 aCoul
+         qb = -169.296 aCoul
+        qjd = -411.056 aCoul
+        qjs = -181.874 aCoul
+     qgdovl = -4.58802 aCoul
+     qgsovl = 19.4472 aCoul
+        qgi = 192.393 aCoul
+        qdi = 1.29029 aCoul
+        qsi = -24.388 aCoul
+        qbi = -169.296 aCoul
+        ide = 757.009 nA
+        ige = 50.8715 fA
+        ise = -757.009 nA
+        ibe = -27.7132 fA
+        idb = 16.5865 fA
+        isb = 10.8289 fA
+        vsb = 499.093 mV
+        gmb = 3.03682 uS
+        vgt = -44.9912 mV
+       vdss = 65.4172 mV
+  vsat_marg = 689.754 mV
+  self_gain = 52.5109
+       rout = 3.59146 MOhm
+       beff = 747.954 uA/V^2
+        fug = 6.21157 GHz
+      rgate = 0 Ohm
+     vearly = 2.71877 V
+
+Instance: I1.NM5 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.IBIAS2) = 483.871 mV
+          g : V(IBIAS) = 683.871 mV
+          s : V(I1.net141) = 164.266 mV
+          b : V(VSS) = 0 V
+     region = subth
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 1 uA
+        vgs = 519.606 mV
+        vds = 319.606 mV
+        vbs = -164.266 mV
+        vgd = 200 mV
+        vdb = 483.871 mV
+        vgb = 683.871 mV
+        vth = 527.79 mV
+      vdsat = 74.1236 mV
+         gm = 17.688 uS
+        gds = 463.66 nS
+       gmbs = 4.23387 uS
+    betaeff = 642.986 uA/V^2
+        cjd = 264.044 aF
+        cjs = 294.186 aF
+        cgg = 312.109 aF
+        cgd = -103.412 aF
+        cgs = -178.275 aF
+        cgb = -30.4226 aF
+        cdg = -136.931 aF
+        cdd = 103.554 aF
+        cds = 41.7105 aF
+        cdb = -8.33384 aF
+        csg = -153.88 aF
+        csd = -313.21e-21 F
+        css = 166.584 aF
+        csb = -12.3903 aF
+        cbg = -21.2983 aF
+        cbd = 170.843e-21 F
+        cbs = -30.0193 aF
+        cbb = 51.1468 aF
+     covlgs = 104.338 aF/m
+     covlgd = 103.606 aF/m
+     covlgb = 0 F/m
+      cggbo = 104.166 aF
+      cgdbo = 193.554e-21 F
+      cgsbo = -73.937 aF
+      cbgbo = -21.2983 aF
+      cbdbo = 170.843e-21 F
+      cbsbo = -30.0193 aF
+      cdgbo = -33.3254 aF
+      cddbo = -51.1877e-21 F
+      cdsbo = 41.7105 aF
+        ron = 319.606 kOhm
+         id = 1 uA
+      ibulk = -4.24946 fA
+        pwr = 319.606 nW
+   gmoverid = 17.688 1/V
+       ueff = 49.2061e-03
+      rdeff = 7.83206 Ohm
+      rseff = 7.83206 Ohm
+       rgbd = 0 Ohm
+      igidl = 0 A
+      igisl = 0 A
+       igdt = 89.0725 fA
+        igd = 13.0575 fA
+        igs = 76.0148 fA
+        igb = 70.0581e-24 A
+     igbacc = 56.6602e-36 A
+     igbinv = 70.0581e-24 A
+       igcs = 85.4834e-21 A
+       igcd = 83.4809e-21 A
+       isub = 2.49309e-21 A
+        gbs = 13.6978 fS
+        gbd = 6.9736 fS
+         qg = 138.496 aCoul
+         qd = -9.06801 aCoul
+         qs = -19.1634 aCoul
+         qb = -110.265 aCoul
+        qjd = -138.897 aCoul
+        qjs = -49.9973 aCoul
+     qgdovl = 5.46517 aCoul
+     qgsovl = 13.7966 aCoul
+        qgi = 138.496 aCoul
+        qdi = -9.06801 aCoul
+        qsi = -19.1634 aCoul
+        qbi = -110.265 aCoul
+        ide = 1 uA
+        ige = 89.0725 fA
+        ise = -1 uA
+        ibe = -4.31427 fA
+        idb = 2.34952 fA
+        isb = 1.96475 fA
+        vsb = 164.266 mV
+        gmb = 4.23387 uS
+        vgt = -8.18393 mV
+       vdss = 74.1236 mV
+  vsat_marg = 245.482 mV
+  self_gain = 38.1488
+       rout = 2.15675 MOhm
+       beff = 29.8611 mA/V^2
+        fug = 9.01972 GHz
+      rgate = 0 Ohm
+     vearly = 2.15675 V
+
+Instance: I1.NM6 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net141) = 164.266 mV
+          g : V(I1.IBIAS2) = 483.871 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = subth
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 1 uA
+        vgs = 483.871 mV
+        vds = 164.266 mV
+        vbs = 0 V
+        vgd = 319.606 mV
+        vdb = 164.266 mV
+        vgb = 483.871 mV
+        vth = 487.193 mV
+      vdsat = 75.0562 mV
+         gm = 17.4313 uS
+        gds = 766.768 nS
+       gmbs = 4.50718 uS
+    betaeff = 636.79 uA/V^2
+        cjd = 294.188 aF
+        cjs = 315.396 aF
+        cgg = 318.584 aF
+        cgd = -105.634 aF
+        cgs = -181.115 aF
+        cgb = -31.8342 aF
+        cdg = -139.893 aF
+        cdd = 105.416 aF
+        cds = 44.1912 aF
+        cdb = -9.71458 aF
+        csg = -155.886 aF
+        csd = 119.484e-21 F
+        css = 169.761 aF
+        csb = -13.9941 aF
+        cbg = -22.8045 aF
+        cbd = 98.3916e-21 F
+        cbs = -32.8368 aF
+        cbb = 55.5429 aF
+     covlgs = 104.311 aF/m
+     covlgd = 104.069 aF/m
+     covlgb = 0 F/m
+      cggbo = 110.203 aF
+      cgdbo = -1.56469 aF
+      cgsbo = -76.8044 aF
+      cbgbo = -22.8045 aF
+      cbdbo = 98.3916e-21 F
+      cbsbo = -32.8368 aF
+      cdgbo = -35.8234 aF
+      cddbo = 1.34682 aF
+      cdsbo = 44.1912 aF
+        ron = 164.266 kOhm
+         id = 1 uA
+      ibulk = -584.713 aA
+        pwr = 164.266 nW
+   gmoverid = 17.4313 1/V
+       ueff = 48.7319e-03
+      rdeff = 7.83206 Ohm
+      rseff = 7.83206 Ohm
+       rgbd = 0 Ohm
+      igidl = 0 A
+      igisl = 0 A
+       igdt = 99.4683 fA
+        igd = 32.1463 fA
+        igs = 67.3219 fA
+        igb = 29.7121e-24 A
+     igbacc = 40.0615e-36 A
+     igbinv = 29.7121e-24 A
+       igcs = 64.6137e-21 A
+       igcd = 63.0912e-21 A
+       isub = 913.158e-24 A
+        gbs = 10.3668 fS
+        gbd = 4.17925 fS
+         qg = 131.757 aCoul
+         qd = -12.4544 aCoul
+         qs = -18.5481 aCoul
+         qb = -100.754 aCoul
+        qjd = -49.9927 aCoul
+        qjs = -2.4702e-21 Coul
+     qgdovl = 8.55618 aCoul
+     qgsovl = 12.8569 aCoul
+        qgi = 131.757 aCoul
+        qdi = -12.4544 aCoul
+        qsi = -18.5481 aCoul
+        qbi = -100.754 aCoul
+        ide = 1 uA
+        ige = 99.4683 fA
+        ise = -1 uA
+        ibe = -601.14 aA
+        idb = 601.058 aA
+        isb = 81.193e-21 A
+        vsb = -0 V
+        gmb = 4.50718 uS
+        vgt = -3.32173 mV
+       vdss = 75.0562 mV
+  vsat_marg = 89.2095 mV
+  self_gain = 22.7335
+       rout = 1.30417 MOhm
+       beff = 181.26 mA/V^2
+        fug = 8.70817 GHz
+      rgate = 0 Ohm
+     vearly = 1.30417 V
+
+Instance: I1.NM7 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net031) = 664.638 mV
+          g : V(I1.net125) = 664.638 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 11.1571 uA
+        vgs = 664.638 mV
+        vds = 664.638 mV
+        vbs = 0 V
+        vgd = -17.2531 nV
+        vdb = 664.638 mV
+        vgb = 664.638 mV
+        vth = 483.982 mV
+      vdsat = 165.575 mV
+         gm = 89.212 uS
+        gds = 2.11178 uS
+       gmbs = 22.7596 uS
+    betaeff = 631.049 uA/V^2
+        cjd = 266.098 aF
+        cjs = 334.642 aF
+        cgg = 402.441 aF
+        cgd = -107.455 aF
+        cgs = -274.489 aF
+        cgb = -20.4964 aF
+        cdg = -177.935 aF
+        cdd = 107.773 aF
+        cds = 88.9392 aF
+        cdb = -18.7772 aF
+        csg = -215.951 aF
+        csd = -599.806e-21 F
+        css = 244.615 aF
+        csb = -28.0641 aF
+        cbg = -8.55508 aF
+        cbd = 281.903e-21 F
+        cbs = -59.0645 aF
+        cbb = 67.3377 aF
+     covlgs = 111.508 aF/m
+     covlgd = 108.046 aF/m
+     covlgb = 0 F/m
+      cggbo = 182.887 aF
+      cgdbo = 591.141e-21 F
+      cgsbo = -162.982 aF
+      cbgbo = -8.55508 aF
+      cbdbo = 281.903e-21 F
+      cbsbo = -59.0645 aF
+      cdgbo = -69.8887 aF
+      cddbo = -273.237e-21 F
+      cdsbo = 88.9392 aF
+        ron = 59.5709 kOhm
+         id = 11.1571 uA
+      ibulk = -4.02249 fA
+        pwr = 7.41543 uW
+   gmoverid = 7.99599 1/V
+       ueff = 47.9984e-03
+      rdeff = 7.2766 Ohm
+      rseff = 7.2766 Ohm
+       rgbd = 0 Ohm
+      igidl = 0 A
+      igisl = 0 A
+       igdt = 103.935 fA
+        igd = 958.161e-21 A
+        igs = 103.933 fA
+        igb = 414.851e-24 A
+     igbacc = 60.0473e-36 A
+     igbinv = 414.851e-24 A
+       igcs = 203.228e-21 A
+       igcd = 192.423e-21 A
+       isub = 477.054e-21 A
+        gbs = 11.1519 fS
+        gbd = 9.8923 fS
+         qg = 177.78 aCoul
+         qd = -15.5403 aCoul
+         qs = -41.1966 aCoul
+         qb = -121.043 aCoul
+        qjd = -196.609 aCoul
+        qjs = -27.1686e-21 Coul
+     qgdovl = 584.153e-21 Coul
+     qgsovl = 18.8144 aCoul
+        qgi = 177.78 aCoul
+        qdi = -15.5403 aCoul
+        qsi = -41.1966 aCoul
+        qbi = -121.043 aCoul
+        ide = 11.1571 uA
+        ige = 103.935 fA
+        ise = -11.1571 uA
+        ibe = -4.08895 fA
+        idb = 4.08757 fA
+        isb = 905.309e-21 A
+        vsb = -0 V
+        gmb = 22.7596 uS
+        vgt = 180.657 mV
+       vdss = 165.575 mV
+  vsat_marg = 499.064 mV
+  self_gain = 42.2448
+       rout = 473.533 kOhm
+       beff = 683.71 uA/V^2
+        fug = 35.281 GHz
+      rgate = 0 Ohm
+     vearly = 5.28325 V
+
+Instance: I1.NM14 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net057) = 1.0602 V
+          g : V(I1.net135) = 499.093 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 3.75164 uA
+        vgs = 499.093 mV
+        vds = 1.0602 V
+        vbs = 0 V
+        vgd = -561.111 mV
+        vdb = 1.0602 V
+        vgb = 499.093 mV
+        vth = 472.607 mV
+      vdsat = 84.8547 mV
+         gm = 64.2047 uS
+        gds = 234.001 nS
+       gmbs = 18.2998 uS
+    betaeff = 1.46952 mA/V^2
+        cjd = 1.59702 fF
+        cjs = 2.26042 fF
+        cgg = 5.68894 fF
+        cgd = -715.33 aF
+        cgs = -4.0299 fF
+        cgb = -943.709 aF
+        cdg = -2.05673 fF
+        cdd = 715.381 aF
+        cds = 1.74542 fF
+        cdb = -404.067 aF
+        csg = -2.83196 fF
+        csd = -69.8895e-21 F
+        css = 3.43773 fF
+        csb = -605.7 aF
+        cbg = -800.25 aF
+        cbd = 18.5766e-21 F
+        cbs = -1.15324 fF
+        cbb = 1.95348 fF
+     covlgs = 821.1 aF/m
+     covlgd = 715.271 aF/m
+     covlgb = 0 F/m
+      cggbo = 4.15257 fF
+      cgdbo = -58.6885e-21 F
+      cgsbo = -3.2088 fF
+      cbgbo = -800.25 aF
+      cbdbo = 18.5766e-21 F
+      cbsbo = -1.15324 fF
+      cdgbo = -1.34146 fF
+      cddbo = 110.001e-21 F
+      cdsbo = 1.74542 fF
+        ron = 282.598 kOhm
+         id = 3.75164 uA
+      ibulk = -1.48362 pA
+        pwr = 3.9775 uW
+   gmoverid = 17.1138 1/V
+       ueff = 38.9211e-03
+      rdeff = 899.211 mOhm
+      rseff = 899.211 mOhm
+       rgbd = 0 Ohm
+      igidl = 8.35976e-39 A
+      igisl = 0 A
+       igdt = -12.0344 fA
+        igd = -63.486 fA
+        igs = 51.4495 fA
+        igb = 1.53847e-21 A
+     igbacc = 879.075e-36 A
+     igbinv = 1.53847e-21 A
+       igcs = 1.05455 aA
+       igcd = 1.02599 aA
+       isub = 1.40843 pA
+        gbs = 89.517 fS
+        gbd = 141.619 fS
+         qg = 4.07524 fCoul
+         qd = -63.0969 aCoul
+         qs = -306.702 aCoul
+         qb = -3.70544 fCoul
+        qjd = -1.98103 fCoul
+        qjs = -7.62555e-21 Coul
+     qgdovl = -71.8904 aCoul
+     qgsovl = 104.344 aCoul
+        qgi = 4.07524 fCoul
+        qdi = -63.0969 aCoul
+        qsi = -306.702 aCoul
+        qbi = -3.70544 fCoul
+        ide = 3.75164 uA
+        ige = -12.0344 fA
+        ise = -3.75164 uA
+        ibe = -1.48373 pA
+        idb = 75.2907 fA
+        isb = 301.986e-21 A
+        vsb = -0 V
+        gmb = 18.2998 uS
+        vgt = 26.4859 mV
+       vdss = 84.8547 mV
+  vsat_marg = 975.349 mV
+  self_gain = 274.377
+       rout = 4.27348 MOhm
+       beff = 10.696 mA/V^2
+        fug = 1.7962 GHz
+      rgate = 0 Ohm
+     vearly = 16.0326 V
+
+Instance: I1.NM15 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net055) = 1.06034 V
+          g : V(I1.net134) = 499.064 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 3.74982 uA
+        vgs = 499.064 mV
+        vds = 1.06034 V
+        vbs = 0 V
+        vgd = -561.278 mV
+        vdb = 1.06034 V
+        vgb = 499.064 mV
+        vth = 472.607 mV
+      vdsat = 84.841 mV
+         gm = 64.1798 uS
+        gds = 233.897 nS
+       gmbs = 18.2927 uS
+    betaeff = 1.46951 mA/V^2
+        cjd = 1.59697 fF
+        cjs = 2.26042 fF
+        cgg = 5.68851 fF
+        cgd = -715.316 aF
+        cgs = -4.02934 fF
+        cgb = -943.847 aF
+        cdg = -2.0565 fF
+        cdd = 715.368 aF
+        cds = 1.74513 fF
+        cdb = -404.002 aF
+        csg = -2.83163 fF
+        csd = -69.9175e-21 F
+        css = 3.4373 fF
+        csb = -605.603 aF
+        cbg = -800.378 aF
+        cbd = 18.5994e-21 F
+        cbs = -1.15309 fF
+        cbb = 1.95345 fF
+     covlgs = 821.1 aF/m
+     covlgd = 715.258 aF/m
+     covlgb = 0 F/m
+      cggbo = 4.15215 fF
+      cgdbo = -58.5521e-21 F
+      cgsbo = -3.20824 fF
+      cbgbo = -800.378 aF
+      cbdbo = 18.5994e-21 F
+      cbsbo = -1.15309 fF
+      cdgbo = -1.34124 fF
+      cddbo = 109.87e-21 F
+      cdsbo = 1.74513 fF
+        ron = 282.771 kOhm
+         id = 3.74982 uA
+      ibulk = -1.48675 pA
+        pwr = 3.9761 uW
+   gmoverid = 17.1154 1/V
+       ueff = 38.921e-03
+      rdeff = 899.211 mOhm
+      rseff = 899.211 mOhm
+       rgbd = 0 Ohm
+      igidl = 8.60089e-39 A
+      igisl = 0 A
+       igdt = -12.0642 fA
+        igd = -63.5113 fA
+        igs = 51.4451 fA
+        igb = 1.53799e-21 A
+     igbacc = 879.024e-36 A
+     igbinv = 1.53799e-21 A
+       igcs = 1.05424 aA
+       igcd = 1.02569 aA
+       isub = 1.41154 pA
+        gbs = 89.517 fS
+        gbd = 141.646 fS
+         qg = 4.0751 fCoul
+         qd = -63.0415 aCoul
+         qs = -306.638 aCoul
+         qb = -3.70542 fCoul
+        qjd = -1.98125 fCoul
+        qjs = -7.62187e-21 Coul
+     qgdovl = -71.9072 aCoul
+     qgsovl = 104.338 aCoul
+        qgi = 4.0751 fCoul
+        qdi = -63.0415 aCoul
+        qsi = -306.638 aCoul
+        qbi = -3.70542 fCoul
+        ide = 3.74982 uA
+        ige = -12.0642 fA
+        ise = -3.74982 uA
+        ibe = -1.48685 pA
+        idb = 75.3103 fA
+        isb = 301.84e-21 A
+        vsb = -0 V
+        gmb = 18.2927 uS
+        vgt = 26.4572 mV
+       vdss = 84.841 mV
+  vsat_marg = 975.501 mV
+  self_gain = 274.393
+       rout = 4.27539 MOhm
+       beff = 10.7141 mA/V^2
+        fug = 1.79564 GHz
+      rgate = 0 Ohm
+     vearly = 16.032 V
+
+Instance: I1.NM16 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net053) = 539.318 mV
+          g : V(I1.net031) = 664.638 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 11.5202 uA
+        vgs = 664.638 mV
+        vds = 539.318 mV
+        vbs = 0 V
+        vgd = 125.32 mV
+        vdb = 539.318 mV
+        vgb = 664.638 mV
+        vth = 486.384 mV
+      vdsat = 163.029 mV
+         gm = 92.279 uS
+        gds = 2.7895 uS
+       gmbs = 23.4412 uS
+    betaeff = 679.335 uA/V^2
+        cjd = 275.424 aF
+        cjs = 334.642 aF
+        cgg = 387.821 aF
+        cgd = -109.579 aF
+        cgs = -258.947 aF
+        cgb = -19.2946 aF
+        cdg = -173.915 aF
+        cdd = 109.882 aF
+        cds = 81.1024 aF
+        cdb = -17.0693 aF
+        csg = -206.661 aF
+        csd = -608.546e-21 F
+        css = 232.702 aF
+        csb = -25.4326 aF
+        cbg = -7.24495 aF
+        cbd = 306.018e-21 F
+        cbs = -54.8576 aF
+        cbb = 61.7965 aF
+     covlgs = 111.508 aF/m
+     covlgd = 110.036 aF/m
+     covlgb = 0 F/m
+      cggbo = 166.277 aF
+      cgdbo = 457.249e-21 F
+      cgsbo = -147.44 aF
+      cbgbo = -7.24495 aF
+      cbdbo = 306.018e-21 F
+      cbsbo = -54.8576 aF
+      cdgbo = -63.8784 aF
+      cddbo = -154.721e-21 F
+      cdsbo = 81.1024 aF
+        ron = 46.8149 kOhm
+         id = 11.5202 uA
+      ibulk = -2.90579 fA
+        pwr = 6.21306 uW
+   gmoverid = 8.01018 1/V
+       ueff = 48.7477e-03
+      rdeff = 7.2766 Ohm
+      rseff = 7.2766 Ohm
+       rgbd = 0 Ohm
+      igidl = 0 A
+      igisl = 0 A
+       igdt = 109.095 fA
+        igd = 4.58636 fA
+        igs = 104.508 fA
+        igb = 384.156e-24 A
+     igbacc = 57.4003e-36 A
+     igbinv = 384.156e-24 A
+       igcs = 195.908e-21 A
+       igcd = 185.656e-21 A
+       isub = 43.8775e-21 A
+        gbs = 11.1519 fS
+        gbd = 8.17071 fS
+         qg = 167.178 aCoul
+         qd = -17.4304 aCoul
+         qs = -39.15 aCoul
+         qb = -110.597 aCoul
+        qjd = -162.688 aCoul
+        qjs = -28.0529e-21 Coul
+     qgdovl = 3.81989 aCoul
+     qgsovl = 18.8143 aCoul
+        qgi = 167.178 aCoul
+        qdi = -17.4304 aCoul
+        qsi = -39.15 aCoul
+        qbi = -110.597 aCoul
+        ide = 11.5202 uA
+        ige = 109.095 fA
+        ise = -11.5202 uA
+        ibe = -2.95972 fA
+        idb = 2.95874 fA
+        isb = 934.777e-21 A
+        vsb = -0 V
+        gmb = 23.4412 uS
+        vgt = 178.255 mV
+       vdss = 163.029 mV
+  vsat_marg = 376.29 mV
+  self_gain = 33.0808
+       rout = 358.487 kOhm
+       beff = 725.116 uA/V^2
+        fug = 37.8697 GHz
+      rgate = 0 Ohm
+     vearly = 4.12984 V
+
+Instance: I1.NM17 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(VOUT) = 900.072 mV
+          g : V(I1.net053) = 539.318 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 59.3796 uA
+        vgs = 539.318 mV
+        vds = 900.072 mV
+        vbs = 0 V
+        vgd = -360.754 mV
+        vdb = 900.072 mV
+        vgb = 539.318 mV
+        vth = 504.427 mV
+      vdsat = 98.8966 mV
+         gm = 910.626 uS
+        gds = 17.9555 uS
+       gmbs = 230.345 uS
+    betaeff = 15.9137 mA/V^2
+        cjd = 5.20911 fF
+        cjs = 7.11329 fF
+        cgg = 8.12176 fF
+        cgd = -2.31823 fF
+        cgs = -4.82383 fF
+        cgb = -979.705 aF
+        cdg = -3.48272 fF
+        cdd = 2.32441 fF
+        cds = 1.45972 fF
+        cdb = -301.411 aF
+        csg = -4.32814 fF
+        csd = -18.089 aF
+        css = 4.79785 fF
+        csb = -451.622 aF
+        cbg = -310.908 aF
+        cbd = 11.9113 aF
+        cbs = -1.43374 fF
+        cbb = 1.73274 fF
+     covlgs = 2.61018 fF/m
+     covlgd = 2.33616 fF/m
+     covlgb = 0 F/m
+      cggbo = 3.17543 fF
+      cgdbo = 17.9286 aF
+      cgsbo = -2.21365 fF
+      cbgbo = -310.908 aF
+      cbdbo = 11.9113 aF
+      cbsbo = -1.43374 fF
+      cdgbo = -1.14656 fF
+      cddbo = -11.7509 aF
+      cdsbo = 1.45972 fF
+        ron = 15.1579 kOhm
+         id = 59.3796 uA
+      ibulk = -796.163 fA
+        pwr = 53.4459 uW
+   gmoverid = 15.3357 1/V
+       ueff = 43.6959e-03
+      rdeff = 280.251 mOhm
+      rseff = 280.251 mOhm
+       rgbd = 0 Ohm
+      igidl = 4.40813e-48 A
+      igisl = 0 A
+       igdt = 62.2795 fA
+        igd = -88.7518 fA
+        igs = 151.027 fA
+        igb = 2.01195e-21 A
+     igbacc = 1.03096e-33 A
+     igbinv = 2.01195e-21 A
+       igcs = 2.26976 aA
+       igcd = 2.19777 aA
+       isub = 619.942 fA
+        gbs = 287.008 fS
+        gbd = 361.112 fS
+         qg = 3.62067 fCoul
+         qd = 8.49414 aCoul
+         qs = -582.504 aCoul
+         qb = -3.04666 fCoul
+        qjd = -5.40686 fCoul
+        qjs = -118.374e-21 Coul
+     qgdovl = -158.252 aCoul
+     qgsovl = 358.073 aCoul
+        qgi = 3.62067 fCoul
+        qdi = 8.49414 aCoul
+        qsi = -582.504 aCoul
+        qbi = -3.04666 fCoul
+        ide = 59.3796 uA
+        ige = 62.2795 fA
+        ise = -59.3796 uA
+        ibe = -796.253 fA
+        idb = 176.307 fA
+        isb = 4.77608 aA
+        vsb = -0 V
+        gmb = 230.345 uS
+        vgt = 34.8915 mV
+       vdss = 98.8966 mV
+  vsat_marg = 801.175 mV
+  self_gain = 50.7157
+       rout = 55.6932 kOhm
+       beff = 97.55 mA/V^2
+        fug = 17.8447 GHz
+      rgate = 0 Ohm
+     vearly = 3.30704 V
+
+Instance: I1.NM22 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.IBIASP2) = 983.209 mV
+          g : V(IBIAS) = 683.871 mV
+          s : V(I1.net140) = 171.942 mV
+          b : V(VSS) = 0 V
+     region = subth
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 1.00578 uA
+        vgs = 511.929 mV
+        vds = 811.267 mV
+        vbs = -171.942 mV
+        vgd = -299.338 mV
+        vdb = 983.209 mV
+        vgb = 683.871 mV
+        vth = 526.292 mV
+      vdsat = 72.0645 mV
+         gm = 17.891 uS
+        gds = 301.385 nS
+       gmbs = 4.26541 uS
+    betaeff = 643.105 uA/V^2
+        cjd = 232.733 aF
+        cjs = 293.314 aF
+        cgg = 300.143 aF
+        cgd = -94.0388 aF
+        cgs = -174.967 aF
+        cgb = -31.1367 aF
+        cdg = -126.173 aF
+        cdd = 94.2187 aF
+        cds = 39.8609 aF
+        cdb = -7.90636 aF
+        csg = -151.87 aF
+        csd = -351.81e-21 F
+        css = 164.068 aF
+        csb = -11.8459 aF
+        cbg = -22.0992 aF
+        cbd = 171.882e-21 F
+        cbs = -28.9617 aF
+        cbb = 50.889 aF
+     covlgs = 104.332 aF/m
+     covlgd = 94.4447 aF/m
+     covlgb = 0 F/m
+      cggbo = 101.365 aF
+      cgdbo = 405.988e-21 F
+      cgsbo = -70.6347 aF
+      cbgbo = -22.0992 aF
+      cbdbo = 171.882e-21 F
+      cbsbo = -28.9617 aF
+      cdgbo = -31.7285 aF
+      cddbo = -226.06e-21 F
+      cdsbo = 39.8609 aF
+        ron = 806.604 kOhm
+         id = 1.00578 uA
+      ibulk = -11.5068 fA
+        pwr = 815.956 nW
+   gmoverid = 17.7882 1/V
+       ueff = 49.2152e-03
+      rdeff = 7.83206 Ohm
+      rseff = 7.83206 Ohm
+       rgbd = 0 Ohm
+      igidl = 218.96e-51 A
+      igisl = 0 A
+       igdt = 41.2083 fA
+        igd = -32.9126 fA
+        igs = 74.1207 fA
+        igb = 68.103e-24 A
+     igbacc = 56.6647e-36 A
+     igbinv = 68.103e-24 A
+       igcs = 80.8593e-21 A
+       igcd = 79.0156e-21 A
+       isub = 2.00655 fA
+        gbs = 13.8749 fS
+        gbd = 14.6644 fS
+         qg = 127.105 aCoul
+         qd = 1.96662 aCoul
+         qs = -18.6667 aCoul
+         qb = -110.405 aCoul
+        qjd = -262.357 aCoul
+        qjs = -52.2524 aCoul
+     qgdovl = -5.35152 aCoul
+     qgsovl = 13.5946 aCoul
+        qgi = 127.105 aCoul
+        qdi = 1.96662 aCoul
+        qsi = -18.6667 aCoul
+        qbi = -110.405 aCoul
+        ide = 1.00578 uA
+        ige = 41.2083 fA
+        ise = -1.00578 uA
+        ibe = -11.6223 fA
+        idb = 7.54517 fA
+        isb = 2.07059 fA
+        vsb = 171.942 mV
+        gmb = 4.26541 uS
+        vgt = -14.363 mV
+       vdss = 72.0645 mV
+  vsat_marg = 739.202 mV
+  self_gain = 59.3625
+       rout = 3.31801 MOhm
+       beff = 9.75085 mA/V^2
+        fug = 9.48695 GHz
+      rgate = 0 Ohm
+     vearly = 3.33719 V
+
+Instance: I1.NM23 of AZC
+Model: n18
+Primitive: bsim4
+          d : V(I1.net140) = 171.942 mV
+          g : V(I1.IBIAS2) = 483.871 mV
+          s : V(VSS) = 0 V
+          b : V(VSS) = 0 V
+     region = subth
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = 1.00578 uA
+        vgs = 483.871 mV
+        vds = 171.942 mV
+        vbs = 0 V
+        vgd = 311.929 mV
+        vdb = 171.942 mV
+        vgb = 483.871 mV
+        vth = 487.141 mV
+      vdsat = 75.0754 mV
+         gm = 17.5346 uS
+        gds = 740.14 nS
+       gmbs = 4.53366 uS
+    betaeff = 636.788 uA/V^2
+        cjd = 293.316 aF
+        cjs = 315.396 aF
+        cgg = 318.359 aF
+        cgd = -105.357 aF
+        cgs = -181.113 aF
+        cgb = -31.8882 aF
+        cdg = -139.705 aF
+        cdd = 105.194 aF
+        cds = 44.1808 aF
+        cdb = -9.66962 aF
+        csg = -155.846 aF
+        csd = 52.9048e-21 F
+        css = 169.776 aF
+        csb = -13.9831 aF
+        cbg = -22.8079 aF
+        cbd = 110.14e-21 F
+        cbs = -32.8432 aF
+        cbb = 55.5409 aF
+     covlgs = 104.311 aF/m
+     covlgd = 104.05 aF/m
+     covlgb = 0 F/m
+      cggbo = 109.998 aF
+      cgdbo = -1.30718 aF
+      cgsbo = -76.8025 aF
+      cbgbo = -22.8079 aF
+      cbdbo = 110.14e-21 F
+      cbsbo = -32.8432 aF
+      cdgbo = -35.6553 aF
+      cddbo = 1.14414 aF
+      cdsbo = 44.1808 aF
+        ron = 170.954 kOhm
+         id = 1.00578 uA
+      ibulk = -616.233 aA
+        pwr = 172.936 nW
+   gmoverid = 17.4338 1/V
+       ueff = 48.7317e-03
+      rdeff = 7.83206 Ohm
+      rseff = 7.83206 Ohm
+       rgbd = 0 Ohm
+      igidl = 0 A
+      igisl = 0 A
+       igdt = 98.053 fA
+        igd = 30.731 fA
+        igs = 67.3218 fA
+        igb = 29.7199e-24 A
+     igbacc = 40.0615e-36 A
+     igbinv = 29.7199e-24 A
+       igcs = 64.6118e-21 A
+       igcd = 63.0876e-21 A
+       isub = 995.919e-24 A
+        gbs = 10.3668 fS
+        gbd = 4.23237 fS
+         qg = 131.546 aCoul
+         qd = -12.245 aCoul
+         qs = -18.5474 aCoul
+         qb = -100.753 aCoul
+        qjd = -52.2478 aCoul
+        qjs = -2.48448e-21 Coul
+     qgdovl = 8.35634 aCoul
+     qgsovl = 12.8569 aCoul
+        qgi = 131.546 aCoul
+        qdi = -12.245 aCoul
+        qsi = -18.5474 aCoul
+        qbi = -100.753 aCoul
+        ide = 1.00578 uA
+        ige = 98.053 fA
+        ise = -1.00578 uA
+        ibe = -633.427 aA
+        idb = 633.344 aA
+        isb = 81.6624e-21 A
+        vsb = -0 V
+        gmb = 4.53366 uS
+        vgt = -3.26922 mV
+       vdss = 75.0754 mV
+  vsat_marg = 96.867 mV
+  self_gain = 23.6909
+       rout = 1.3511 MOhm
+       beff = 188.211 mA/V^2
+        fug = 8.76595 GHz
+      rgate = 0 Ohm
+     vearly = 1.35891 V
+
+Instance: I1.PM0 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net134) = 499.064 mV
+          g : V(VINN) = 900.072 mV
+          s : V(I1.net118) = 1.51118 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -1.17559 uA
+        vgs = -611.109 mV
+        vds = -1.01212 V
+        vbs = 288.819 mV
+        vgd = 401.008 mV
+        vdb = -1.30094 V
+        vgb = -899.928 mV
+        vth = -563.619 mV
+      vdsat = -90.0415 mV
+         gm = 19.6957 uS
+        gds = 503.436 nS
+       gmbs = 5.57773 uS
+    betaeff = 342.288 uA/V^2
+        cjd = 673.288 aF
+        cjs = 882.554 aF
+        cgg = 1.01813 fF
+        cgd = -333.098 aF
+        cgs = -625.652 aF
+        cgb = -59.3761 aF
+        cdg = -427.767 aF
+        cdd = 334.013 aF
+        cds = 120.405 aF
+        cdb = -26.6507 aF
+        csg = -539.785 aF
+        csd = -1.56504 aF
+        css = 581.295 aF
+        csb = -39.9453 aF
+        cbg = -50.5742 aF
+        cbd = 649.825e-21 F
+        cbs = -76.0478 aF
+        cbb = 125.972 aF
+     covlgs = 400.802 aF/m
+     covlgd = 335.04 aF/m
+     covlgb = 0 F/m
+      cggbo = 282.285 aF
+      cgdbo = 1.9418 aF
+      cgsbo = -224.85 aF
+      cbgbo = -50.5742 aF
+      cbdbo = 649.825e-21 F
+      cbsbo = -76.0478 aF
+      cdgbo = -92.7274 aF
+      cddbo = -1.02658 aF
+      cdsbo = 120.405 aF
+        ron = 860.942 kOhm
+         id = -1.17559 uA
+      ibulk = 34.8528 fA
+        pwr = 1.18984 uW
+   gmoverid = 16.7539 1/V
+       ueff = 10.5428e-03
+      rdeff = 2.21715 Ohm
+      rseff = 2.21715 Ohm
+       rgbd = 0 Ohm
+      igidl = -71.109e-51 A
+      igisl = -0 A
+       igdt = -600.37 aA
+        igd = 560.949 aA
+        igs = -1.16091 fA
+        igb = -1.02041e-21 A
+     igbacc = -232.384e-36 A
+     igbinv = -1.02041e-21 A
+       igcs = -208.133e-21 A
+       igcd = -202.164e-21 A
+       isub = 135.709 aA
+        gbs = 126.248 aS
+        gbd = 59.2932 fS
+         qg = -375.656 aCoul
+         qd = -26.7025 aCoul
+         qs = 110.799 aCoul
+         qb = 291.559 aCoul
+        qjd = 1.04192 fCoul
+        qjs = 271.144 aCoul
+     qgdovl = 39.3128 aCoul
+     qgsovl = -91.8968 aCoul
+        qgi = -375.656 aCoul
+        qdi = -26.7025 aCoul
+        qsi = 110.799 aCoul
+        qbi = 291.559 aCoul
+        ide = -1.17559 uA
+        ige = -600.37 aA
+        ise = 1.17559 uA
+        ibe = 35.0118 fA
+        idb = 34.8408 fA
+        isb = 35.2863 aA
+        vsb = -288.819 mV
+        gmb = 5.57773 uS
+        vgt = -47.4898 mV
+       vdss = -90.0415 mV
+  vsat_marg = 922.075 mV
+  self_gain = 39.1226
+       rout = 1.98635 MOhm
+       beff = 1.04253 mA/V^2
+        fug = 3.07886 GHz
+      rgate = 0 Ohm
+     vearly = 2.33514 V
+
+Instance: I1.PM1 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net135) = 499.093 mV
+          g : V(VINP) = 900 mV
+          s : V(I1.net118) = 1.51118 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -1.177 uA
+        vgs = -611.181 mV
+        vds = -1.01209 V
+        vbs = 288.819 mV
+        vgd = 400.907 mV
+        vdb = -1.30091 V
+        vgb = -900 mV
+        vth = -563.619 mV
+      vdsat = -90.0806 mV
+         gm = 19.7142 uS
+        gds = 503.914 nS
+       gmbs = 5.58297 uS
+    betaeff = 342.285 uA/V^2
+        cjd = 673.292 aF
+        cjs = 882.554 aF
+        cgg = 1.01819 fF
+        cgd = -333.105 aF
+        cgs = -625.729 aF
+        cgb = -59.3579 aF
+        cdg = -427.803 aF
+        cdd = 334.021 aF
+        cds = 120.441 aF
+        cdb = -26.6588 aF
+        csg = -539.827 aF
+        csd = -1.56552 aF
+        css = 581.35 aF
+        csb = -39.9574 aF
+        cbg = -50.5612 aF
+        cbd = 649.957e-21 F
+        cbs = -76.0628 aF
+        cbb = 125.974 aF
+     covlgs = 400.802 aF/m
+     covlgd = 335.048 aF/m
+     covlgb = 0 F/m
+      cggbo = 282.342 aF
+      cgdbo = 1.94245 aF
+      cgsbo = -224.927 aF
+      cbgbo = -50.5612 aF
+      cbdbo = 649.957e-21 F
+      cbsbo = -76.0628 aF
+      cdgbo = -92.7556 aF
+      cddbo = -1.02688 aF
+      cdsbo = 120.441 aF
+        ron = 859.889 kOhm
+         id = -1.177 uA
+      ibulk = 34.851 fA
+        pwr = 1.19123 uW
+   gmoverid = 16.7495 1/V
+       ueff = 10.5427e-03
+      rdeff = 2.21715 Ohm
+      rseff = 2.21715 Ohm
+       rgbd = 0 Ohm
+      igidl = -71.0868e-51 A
+      igisl = -0 A
+       igdt = -600.868 aA
+        igd = 560.694 aA
+        igs = -1.16115 fA
+        igb = -1.02117e-21 A
+     igbacc = -232.402e-36 A
+     igbinv = -1.02117e-21 A
+       igcs = -208.227e-21 A
+       igcd = -202.253e-21 A
+       isub = 135.606 aA
+        gbs = 126.248 aS
+        gbd = 59.2909 fS
+         qg = -375.696 aCoul
+         qd = -26.6874 aCoul
+         qs = 110.82 aCoul
+         qb = 291.563 aCoul
+        qjd = 1.0419 fCoul
+        qjs = 271.144 aCoul
+     qgdovl = 39.3043 aCoul
+     qgsovl = -91.9076 aCoul
+        qgi = -375.696 aCoul
+        qdi = -26.6874 aCoul
+        qsi = 110.82 aCoul
+        qbi = 291.563 aCoul
+        ide = -1.177 uA
+        ige = -600.868 aA
+        ise = 1.177 uA
+        ibe = 35.01 fA
+        idb = 34.8391 fA
+        isb = 35.2863 aA
+        vsb = -288.819 mV
+        gmb = 5.58297 uS
+        vgt = -47.5615 mV
+       vdss = -90.0806 mV
+  vsat_marg = 922.008 mV
+  self_gain = 39.122
+       rout = 1.98446 MOhm
+       beff = 1.04063 mA/V^2
+        fug = 3.08155 GHz
+      rgate = 0 Ohm
+     vearly = 2.33571 V
+
+Instance: I1.PM2 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net118) = 1.51118 V
+          g : V(I1.IBIASP1) = 1.18437 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -2.35259 uA
+        vgs = -615.635 mV
+        vds = -288.819 mV
+        vbs = 0 V
+        vgd = -326.815 mV
+        vdb = -288.819 mV
+        vgb = -615.635 mV
+        vth = -484.268 mV
+      vdsat = -140.861 mV
+         gm = 28.3526 uS
+        gds = 1.00983 uS
+       gmbs = 9.33062 uS
+    betaeff = 249.248 uA/V^2
+        cjd = 669.402 aF
+        cjs = 760.736 aF
+        cgg = 853.976 aF
+        cgd = -296.993 aF
+        cgs = -525.225 aF
+        cgb = -31.7582 aF
+        cdg = -388.072 aF
+        cdd = 297.48 aF
+        cds = 121.591 aF
+        cdb = -30.9997 aF
+        csg = -432.186 aF
+        csd = -485.441e-21 F
+        css = 478.138 aF
+        csb = -45.4662 aF
+        cbg = -33.7183 aF
+        cbd = -1.52032e-21 F
+        cbs = -74.5043 aF
+        cbb = 108.224 aF
+     covlgs = 297.316 aF/m
+     covlgd = 296.048 aF/m
+     covlgb = 0 F/m
+      cggbo = 260.612 aF
+      cgdbo = -945.335e-21 F
+      cgsbo = -227.909 aF
+      cbgbo = -33.7183 aF
+      cbdbo = -1.52032e-21 F
+      cbsbo = -74.5043 aF
+      cdgbo = -92.0241 aF
+      cddbo = 1.4323 aF
+      cdsbo = 121.591 aF
+        ron = 122.766 kOhm
+         id = -2.35259 uA
+      ibulk = 2.20079 fA
+        pwr = 679.474 nW
+   gmoverid = 12.0516 1/V
+       ueff = 10.6264e-03
+      rdeff = 3.02741 Ohm
+      rseff = 3.02741 Ohm
+       rgbd = 0 Ohm
+      igidl = -0 A
+      igisl = -0 A
+       igdt = -1.13608 fA
+        igd = -271.429 aA
+        igs = -864.351 aA
+        igb = -412.956e-24 A
+     igbacc = -118.351e-36 A
+     igbinv = -412.956e-24 A
+       igcs = -155.597e-21 A
+       igcd = -148.756e-21 A
+       isub = 12.9965e-21 A
+        gbs = 122.09 aS
+        gbd = 9.71116 fS
+         qg = -332.459 aCoul
+         qd = 53.2191 aCoul
+         qs = 93.0143 aCoul
+         qb = 186.226 aCoul
+        qjd = 205.534 aCoul
+        qjs = 5.41817e-21 Coul
+     qgdovl = -36.7786 aCoul
+     qgsovl = -68.6689 aCoul
+        qgi = -332.459 aCoul
+        qdi = 53.2191 aCoul
+        qsi = 93.0143 aCoul
+        qbi = 186.226 aCoul
+        ide = -2.35259 uA
+        ige = -1.13608 fA
+        ise = 2.35259 uA
+        ibe = 2.22967 fA
+        idb = 2.22965 fA
+        isb = 869.566e-24 A
+        vsb = -0 V
+        gmb = 9.33062 uS
+        vgt = -131.366 mV
+       vdss = -140.861 mV
+  vsat_marg = 147.958 mV
+  self_gain = 28.0765
+       rout = 990.264 kOhm
+       beff = 272.652 uA/V^2
+        fug = 5.28405 GHz
+      rgate = 0 Ohm
+     vearly = 2.32969 V
+
+Instance: I1.PM3 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net052) = 1.25426 V
+          g : V(I1.net050) = 1.2502 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -757.009 nA
+        vgs = -549.803 mV
+        vds = -545.736 mV
+        vbs = 0 V
+        vgd = -4.06608 mV
+        vdb = -545.736 mV
+        vgb = -549.803 mV
+        vth = -485.808 mV
+      vdsat = -95.6009 mV
+         gm = 12.241 uS
+        gds = 344.224 nS
+       gmbs = 3.9287 uS
+    betaeff = 195.532 uA/V^2
+        cjd = 463.148 aF
+        cjs = 572.645 aF
+        cgg = 570.845 aF
+        cgd = -206.895 aF
+        cgs = -334.6 aF
+        cgb = -29.3497 aF
+        cdg = -255.434 aF
+        cdd = 207.285 aF
+        cds = 63.9802 aF
+        cdb = -15.831 aF
+        csg = -288.655 aF
+        csd = -684.976e-21 F
+        css = 313.011 aF
+        csb = -23.6706 aF
+        cbg = -26.7552 aF
+        cbd = 294.643e-21 F
+        cbs = -42.3907 aF
+        cbb = 68.8513 aF
+     covlgs = 217.245 aF/m
+     covlgd = 207.673 aF/m
+     covlgb = 0 F/m
+      cggbo = 145.927 aF
+      cgdbo = 778.248e-21 F
+      cgsbo = -117.355 aF
+      cbgbo = -26.7552 aF
+      cbdbo = 294.643e-21 F
+      cbsbo = -42.3907 aF
+      cdgbo = -47.7613 aF
+      cddbo = -387.915e-21 F
+      cdsbo = 63.9802 aF
+        ron = 720.912 kOhm
+         id = -757.009 nA
+      ibulk = 3.77541 fA
+        pwr = 413.127 nW
+   gmoverid = 16.1703 1/V
+       ueff = 10.8361e-03
+      rdeff = 4.21875 Ohm
+      rseff = 4.21875 Ohm
+       rgbd = 0 Ohm
+      igidl = -0 A
+      igisl = -0 A
+       igdt = -518.817 aA
+        igd = -98.3505e-21 A
+        igs = -518.589 aA
+        igb = -112.358e-24 A
+     igbacc = -74.0124e-36 A
+     igbinv = -112.358e-24 A
+       igcs = -66.0379e-21 A
+       igcd = -64.0349e-21 A
+       isub = 15.1528e-21 A
+        gbs = 115.932 aS
+        gbd = 10.5081 fS
+         qg = -181.882 aCoul
+         qd = 9.05824 aCoul
+         qs = 55.4767 aCoul
+         qb = 117.347 aCoul
+        qjd = 278.899 aCoul
+        qjs = 1.82882e-21 Coul
+     qgdovl = -1.96593 aCoul
+     qgsovl = -44.8653 aCoul
+        qgi = -181.882 aCoul
+        qdi = 9.05824 aCoul
+        qsi = 55.4767 aCoul
+        qbi = 117.347 aCoul
+        ide = -757.009 nA
+        ige = -518.817 aA
+        ise = 757.009 nA
+        ibe = 3.82999 fA
+        idb = 3.82997 fA
+        isb = 370.246e-24 A
+        vsb = -0 V
+        gmb = 3.9287 uS
+        vgt = -63.9944 mV
+       vdss = -95.6009 mV
+  vsat_marg = 450.136 mV
+  self_gain = 35.5613
+       rout = 2.90509 MOhm
+       beff = 369.698 uA/V^2
+        fug = 3.41287 GHz
+      rgate = 0 Ohm
+     vearly = 2.19918 V
+
+Instance: I1.PM4 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net050) = 1.2502 V
+          g : V(I1.net050) = 1.2502 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -758.408 nA
+        vgs = -549.803 mV
+        vds = -549.803 mV
+        vbs = 0 V
+        vgd = 0 V
+        vdb = -549.803 mV
+        vgb = -549.803 mV
+        vth = -485.769 mV
+      vdsat = -95.6236 mV
+         gm = 12.2592 uS
+        gds = 344.119 nS
+       gmbs = 3.93401 uS
+    betaeff = 195.533 uA/V^2
+        cjd = 462.584 aF
+        cjs = 572.645 aF
+        cgg = 570.608 aF
+        cgd = -206.645 aF
+        cgs = -334.613 aF
+        cgb = -29.3502 aF
+        cdg = -255.19 aF
+        cdd = 207.035 aF
+        cds = 63.9852 aF
+        cdb = -15.8302 aF
+        csg = -288.665 aF
+        csd = -685.61e-21 F
+        css = 313.021 aF
+        csb = -23.6708 aF
+        cbg = -26.7528 aF
+        cbd = 295.08e-21 F
+        cbs = -42.3935 aF
+        cbb = 68.8512 aF
+     covlgs = 217.245 aF/m
+     covlgd = 207.425 aF/m
+     covlgb = 0 F/m
+      cggbo = 145.938 aF
+      cgdbo = 780.45e-21 F
+      cgsbo = -117.368 aF
+      cbgbo = -26.7528 aF
+      cbdbo = 295.08e-21 F
+      cbsbo = -42.3935 aF
+      cdgbo = -47.7651 aF
+      cddbo = -389.921e-21 F
+      cdsbo = 63.9852 aF
+        ron = 724.943 kOhm
+         id = -758.408 nA
+      ibulk = 3.81787 fA
+        pwr = 416.975 nW
+   gmoverid = 16.1643 1/V
+       ueff = 10.8362e-03
+      rdeff = 4.21875 Ohm
+      rseff = 4.21875 Ohm
+       rgbd = 0 Ohm
+      igidl = -0 A
+      igisl = -0 A
+       igdt = -518.719 aA
+        igd = -92.8404e-24 A
+        igs = -518.589 aA
+        igb = -112.389e-24 A
+     igbacc = -74.0124e-36 A
+     igbinv = -112.389e-24 A
+       igcs = -66.0372e-21 A
+       igcd = -64.0336e-21 A
+       isub = 15.3166e-21 A
+        gbs = 115.932 aS
+        gbd = 10.5743 fS
+         qg = -181.595 aCoul
+         qd = 8.77008 aCoul
+         qs = 55.4795 aCoul
+         qb = 117.345 aCoul
+        qjd = 280.781 aCoul
+        qjs = 1.8322e-21 Coul
+     qgdovl = -1.67618 aCoul
+     qgsovl = -44.8653 aCoul
+        qgi = -181.595 aCoul
+        qdi = 8.77008 aCoul
+        qsi = 55.4795 aCoul
+        qbi = 117.345 aCoul
+        ide = -758.408 nA
+        ige = -518.719 aA
+        ise = 758.408 nA
+        ibe = 3.87285 fA
+        idb = 3.87283 fA
+        isb = 370.93e-24 A
+        vsb = -0 V
+        gmb = 3.93401 uS
+        vgt = -64.0336 mV
+       vdss = -95.6236 mV
+  vsat_marg = 454.179 mV
+  self_gain = 35.6248
+       rout = 2.90597 MOhm
+       beff = 369.927 uA/V^2
+        fug = 3.41935 GHz
+      rgate = 0 Ohm
+     vearly = 2.20391 V
+
+Instance: I1.PM5 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net031) = 664.638 mV
+          g : V(I1.net052) = 1.25426 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -11.1571 uA
+        vgs = -545.736 mV
+        vds = -1.13536 V
+        vbs = 0 V
+        vgd = 589.625 mV
+        vdb = -1.13536 V
+        vgb = -545.736 mV
+        vth = -468.2 mV
+      vdsat = -105.184 mV
+         gm = 165.243 uS
+        gds = 2.48514 uS
+       gmbs = 55.5945 uS
+    betaeff = 2.0424 mA/V^2
+        cjd = 4.85552 fF
+        cjs = 7.06737 fF
+        cgg = 9.06738 fF
+        cgd = -2.3903 fF
+        cgs = -6.0014 fF
+        cgb = -675.69 aF
+        cdg = -3.61621 fF
+        cdd = 2.39386 fF
+        cds = 1.64117 fF
+        cdb = -418.813 aF
+        csg = -4.80374 fF
+        csd = -6.29846 aF
+        css = 5.43787 fF
+        csb = -627.835 aF
+        cbg = -647.427 aF
+        cbd = 2.74082 aF
+        cbs = -1.07765 fF
+        cbb = 1.72234 fF
+     covlgs = 2.97738 fF/m
+     covlgd = 2.39789 fF/m
+     covlgb = 0 F/m
+      cggbo = 3.69211 fF
+      cgdbo = 7.59096 aF
+      cgsbo = -3.02402 fF
+      cbgbo = -647.427 aF
+      cbdbo = 2.74082 aF
+      cbsbo = -1.07765 fF
+      cdgbo = -1.21833 fF
+      cddbo = -4.03332 aF
+      cdsbo = 1.64117 fF
+        ron = 101.761 kOhm
+         id = -11.1571 uA
+      ibulk = 222.762 fA
+        pwr = 12.6673 uW
+   gmoverid = 14.8106 1/V
+       ueff = 10.2248e-03
+      rdeff = 289.194 mOhm
+      rseff = 289.194 mOhm
+       rgbd = 0 Ohm
+      igidl = -15.0476e-36 A
+      igisl = -0 A
+       igdt = 1.30458 fA
+        igd = 8.82186 fA
+        igs = -7.51475 fA
+        igb = -3.31061e-21 A
+     igbacc = -1.43117e-33 A
+     igbinv = -3.31061e-21 A
+       igcs = -1.29185 aA
+       igcd = -1.24837 aA
+       isub = 23.9232 fA
+        gbs = 328.611 aS
+        gbd = 361.919 fS
+         qg = -3.6296 fCoul
+         qd = -231.036 aCoul
+         qs = 863.987 aCoul
+         qb = 2.99665 fCoul
+        qjd = 6.50324 fCoul
+        qjs = 22.8033e-21 Coul
+     qgdovl = 400.189 aCoul
+     qgsovl = -610.396 aCoul
+        qgi = -3.6296 fCoul
+        qdi = -231.036 aCoul
+        qsi = 863.987 aCoul
+        qbi = 2.99665 fCoul
+        ide = -11.1571 uA
+        ige = 1.30458 fA
+        ise = 11.1571 uA
+        ibe = 222.875 fA
+        idb = 198.952 fA
+        isb = 1.0603e-21 A
+        vsb = -0 V
+        gmb = 55.5945 uS
+        vgt = -77.5364 mV
+       vdss = -105.184 mV
+  vsat_marg = 1.03018 V
+  self_gain = 66.4924
+       rout = 402.391 kOhm
+       beff = 3.71167 mA/V^2
+        fug = 2.90043 GHz
+      rgate = 0 Ohm
+     vearly = 4.48951 V
+
+Instance: I1.PM6 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net053) = 539.318 mV
+          g : V(I1.net050) = 1.2502 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -11.5202 uA
+        vgs = -549.803 mV
+        vds = -1.26068 V
+        vbs = 0 V
+        vgd = 710.879 mV
+        vdb = -1.26068 V
+        vgb = -549.803 mV
+        vth = -463.48 mV
+      vdsat = -109.525 mV
+         gm = 164.476 uS
+        gds = 1.83201 uS
+       gmbs = 55.5048 uS
+    betaeff = 1.88684 mA/V^2
+        cjd = 5.59427 fF
+        cjs = 8.36189 fF
+        cgg = 12.4172 fF
+        cgd = -2.78579 fF
+        cgs = -8.59891 fF
+        cgb = -1.03248 fF
+        cdg = -4.81081 fF
+        cdd = 2.78824 fF
+        cds = 2.719 fF
+        cdb = -696.425 aF
+        csg = -6.55612 fF
+        csd = -4.1943 aF
+        css = 7.60444 fF
+        csb = -1.04413 fF
+        cbg = -1.05025 fF
+        cbd = 1.74674 aF
+        cbs = -1.72453 fF
+        cbb = 2.77303 fF
+     covlgs = 3.52764 fF/m
+     covlgd = 2.79084 fF/m
+     covlgb = 0 F/m
+      cggbo = 6.09869 fF
+      cgdbo = 5.04733 aF
+      cgsbo = -5.07126 fF
+      cbgbo = -1.05025 fF
+      cbdbo = 1.74674 aF
+      cbsbo = -1.72453 fF
+      cdgbo = -2.01997 fF
+      cddbo = -2.59977 aF
+      cdsbo = 2.719 fF
+        ron = 109.432 kOhm
+         id = -11.5202 uA
+      ibulk = 567.674 fA
+        pwr = 14.5233 uW
+   gmoverid = 14.2771 1/V
+       ueff = 9.80636e-03
+      rdeff = 243.911 mOhm
+      rseff = 243.911 mOhm
+       rgbd = 0 Ohm
+      igidl = -12.3943e-30 A
+      igisl = -0 A
+       igdt = 5.43276 fA
+        igd = 14.4833 fA
+        igs = -9.0468 fA
+        igb = -5.44978e-21 A
+     igbacc = -2.11234e-33 A
+     igbinv = -5.44978e-21 A
+       igcs = -1.90159 aA
+       igcd = -1.83487 aA
+       isub = 273.234 fA
+        gbs = 371.003 aS
+        gbd = 509.666 fS
+         qg = -5.74623 fCoul
+         qd = -272.006 aCoul
+         qs = 1.141 fCoul
+         qb = 4.87724 fCoul
+        qjd = 8.40374 fCoul
+        qjs = 23.4961e-21 Coul
+     qgdovl = 547.107 aCoul
+     qgsovl = -728.528 aCoul
+        qgi = -5.74623 fCoul
+        qdi = -272.006 aCoul
+        qsi = 1.141 fCoul
+        qbi = 4.87724 fCoul
+        ide = -11.5202 uA
+        ige = 5.43276 fA
+        ise = 11.5202 uA
+        ibe = 567.8 fA
+        idb = 294.566 fA
+        isb = 1.0425e-21 A
+        vsb = -0 V
+        gmb = 55.5048 uS
+        vgt = -86.3228 mV
+       vdss = -109.525 mV
+  vsat_marg = 1.15116 V
+  self_gain = 89.7789
+       rout = 545.849 kOhm
+       beff = 3.092 mA/V^2
+        fug = 2.10814 GHz
+      rgate = 0 Ohm
+     vearly = 6.2883 V
+
+Instance: I1.PM7 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(VOUT) = 900.072 mV
+          g : V(I1.net052) = 1.25426 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -59.3796 uA
+        vgs = -545.736 mV
+        vds = -899.928 mV
+        vbs = 0 V
+        vgd = 354.191 mV
+        vdb = -899.928 mV
+        vgb = -545.736 mV
+        vth = -472.115 mV
+      vdsat = -104.386 mV
+         gm = 893.71 uS
+        gds = 22.5041 uS
+       gmbs = 298.336 uS
+    betaeff = 11.4266 mA/V^2
+        cjd = 19.619 fF
+        cjs = 27.0578 fF
+        cgg = 30.1001 fF
+        cgd = -9.63778 fF
+        cgs = -18.7504 fF
+        cgb = -1.71191 fF
+        cdg = -12.664 fF
+        cdd = 9.66094 fF
+        cds = 4.01769 fF
+        cdb = -1.01459 fF
+        csg = -15.9057 fF
+        csd = -42.3674 aF
+        css = 17.4684 fF
+        csb = -1.5203 fF
+        cbg = -1.53032 fF
+        cbd = 19.2078 aF
+        cbs = -2.73569 fF
+        cbb = 4.2468 fF
+     covlgs = 11.4468 fF/m
+     covlgd = 9.68829 fF/m
+     covlgb = 0 F/m
+      cggbo = 8.96497 fF
+      cgdbo = 50.5005 aF
+      cgsbo = -7.30356 fF
+      cbgbo = -1.53032 fF
+      cbdbo = 19.2078 aF
+      cbsbo = -2.73569 fF
+      cdgbo = -2.97575 fF
+      cddbo = -27.3408 aF
+      cdsbo = 4.01769 fF
+        ron = 15.1555 kOhm
+         id = -59.3796 uA
+      ibulk = 487.043 fA
+        pwr = 53.4374 uW
+   gmoverid = 15.0508 1/V
+       ueff = 10.9978e-03
+      rdeff = 150.099 mOhm
+      rseff = 150.099 mOhm
+       rgbd = 0 Ohm
+      igidl = -1.52944e-48 A
+      igisl = -0 A
+       igdt = -15.3478 fA
+        igd = 13.6973 fA
+        igs = -29.0374 fA
+        igb = -9.00314e-21 A
+     igbacc = -4.10823e-33 A
+     igbinv = -9.00314e-21 A
+       igcs = -3.92447 aA
+       igcd = -3.7936 aA
+       isub = 152.316 aA
+        gbs = 1.08039 fS
+        gbd = 997.78 fS
+         qg = -9.71596 fCoul
+         qd = -562.456 aCoul
+         qs = 3.01543 fCoul
+         qb = 7.26299 fCoul
+        qjd = 20.3959 fCoul
+        qjs = 120.581e-21 Coul
+     qgdovl = 1.00866 fCoul
+     qgsovl = -2.34672 fCoul
+        qgi = -9.71596 fCoul
+        qdi = -562.456 aCoul
+        qsi = 3.01543 fCoul
+        qbi = 7.26299 fCoul
+        ide = -59.3796 uA
+        ige = -15.3478 fA
+        ise = 59.3796 uA
+        ibe = 487.133 fA
+        idb = 487.07 fA
+        isb = 4.81478e-21 A
+        vsb = -0 V
+        gmb = 298.336 uS
+        vgt = -73.6219 mV
+       vdss = -104.386 mV
+  vsat_marg = 795.542 mV
+  self_gain = 39.7132
+       rout = 44.4363 kOhm
+       beff = 21.9106 mA/V^2
+        fug = 4.72551 GHz
+      rgate = 0 Ohm
+     vearly = 2.63861 V
+
+Instance: I1.PM10 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.IBIASP1) = 1.18437 V
+          g : V(I1.IBIASP2) = 983.209 mV
+          s : V(I1.net139) = 1.63705 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -1.00578 uA
+        vgs = -653.839 mV
+        vds = -452.683 mV
+        vbs = 162.952 mV
+        vgd = -201.156 mV
+        vdb = -615.635 mV
+        vgb = -816.791 mV
+        vth = -536.013 mV
+      vdsat = -129.674 mV
+         gm = 13.0445 uS
+        gds = 407.418 nS
+       gmbs = 3.78795 uS
+    betaeff = 123.409 uA/V^2
+        cjd = 306.504 aF
+        cjs = 357.011 aF
+        cgg = 374.595 aF
+        cgd = -135.36 aF
+        cgs = -225.871 aF
+        cgb = -13.3633 aF
+        cdg = -171.166 aF
+        cdd = 135.672 aF
+        cds = 45.9824 aF
+        cdb = -10.4878 aF
+        csg = -190.019 aF
+        csd = -477.331e-21 F
+        css = 206.131 aF
+        csb = -15.6339 aF
+        cbg = -13.409 aF
+        cbd = 165.813e-21 F
+        cbs = -26.2419 aF
+        cbb = 39.485 aF
+     covlgs = 137.394 aF/m
+     covlgd = 135.86 aF/m
+     covlgb = 0 F/m
+      cggbo = 101.34 aF
+      cgdbo = 500.068e-21 F
+      cgsbo = -88.4768 aF
+      cbgbo = -13.409 aF
+      cbdbo = 165.813e-21 F
+      cbsbo = -26.2419 aF
+      cdgbo = -35.3061 aF
+      cddbo = -188.55e-21 F
+      cdsbo = 45.9824 aF
+        ron = 450.081 kOhm
+         id = -1.00578 uA
+      ibulk = 2.75686 fA
+        pwr = 455.3 nW
+   gmoverid = 12.9696 1/V
+       ueff = 10.5131e-03
+      rdeff = 6.95611 Ohm
+      rseff = 6.95611 Ohm
+       rgbd = 0 Ohm
+      igidl = -0 A
+      igisl = -0 A
+       igdt = -539.904 aA
+        igd = -54.036 aA
+        igs = -485.679 aA
+        igb = -355.172e-24 A
+     igbacc = -80.3165e-36 A
+     igbinv = -355.172e-24 A
+       igcs = -96.2626e-21 A
+       igcd = -92.3008e-21 A
+       isub = 18.8286e-21 A
+        gbs = 106.798 aS
+        gbd = 7.1343 fS
+         qg = -140.745 aCoul
+         qd = 16.7982 aCoul
+         qs = 42.8251 aCoul
+         qb = 81.1218 aCoul
+        qjd = 209.448 aCoul
+        qjs = 60.3217 aCoul
+     qgdovl = -10.6782 aCoul
+     qgsovl = -33.6844 aCoul
+        qgi = -140.745 aCoul
+        qdi = 16.7982 aCoul
+        qsi = 42.8251 aCoul
+        qbi = 81.1218 aCoul
+        ide = -1.00578 uA
+        ige = -539.904 aA
+        ise = 1.00578 uA
+        ibe = 2.83472 fA
+        idb = 2.81731 fA
+        isb = 17.3917 aA
+        vsb = -162.952 mV
+        gmb = 3.78795 uS
+        vgt = -117.826 mV
+       vdss = -129.674 mV
+  vsat_marg = 323.009 mV
+  self_gain = 32.0176
+       rout = 2.45448 MOhm
+       beff = 144.894 uA/V^2
+        fug = 5.54227 GHz
+      rgate = 0 Ohm
+     vearly = 2.46867 V
+
+Instance: I1.PM11 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net139) = 1.63705 V
+          g : V(I1.IBIASP1) = 1.18437 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -1.00578 uA
+        vgs = -615.635 mV
+        vds = -162.952 mV
+        vbs = 0 V
+        vgd = -452.683 mV
+        vdb = -162.952 mV
+        vgb = -615.635 mV
+        vth = -489.329 mV
+      vdsat = -133.988 mV
+         gm = 12.4449 uS
+        gds = 860.092 nS
+       gmbs = 3.93551 uS
+    betaeff = 124.255 uA/V^2
+        cjd = 357.013 aF
+        cjs = 384.552 aF
+        cgg = 384.072 aF
+        cgd = -143.33 aF
+        cgs = -228.779 aF
+        cgb = -11.9627 aF
+        cdg = -178.11 aF
+        cdd = 142.95 aF
+        cds = 48.5022 aF
+        cdb = -13.3419 aF
+        csg = -192.735 aF
+        csd = 1.55634 aF
+        css = 209.276 aF
+        csb = -18.0974 aF
+        cbg = -13.2273 aF
+        cbd = -1.17553 aF
+        cbs = -28.9992 aF
+        cbb = 43.402 aF
+     covlgs = 137.367 aF/m
+     covlgd = 137.162 aF/m
+     covlgb = 0 F/m
+      cggbo = 109.543 aF
+      cgdbo = -6.16803 aF
+      cgsbo = -91.4118 aF
+      cbgbo = -13.2273 aF
+      cbdbo = -1.17553 aF
+      cbsbo = -28.9992 aF
+      cdgbo = -40.9475 aF
+      cddbo = 5.78722 aF
+      cdsbo = 48.5022 aF
+        ron = 162.015 kOhm
+         id = -1.00578 uA
+      ibulk = 482.634 aA
+        pwr = 163.894 nW
+   gmoverid = 12.3734 1/V
+       ueff = 10.5852e-03
+      rdeff = 6.95611 Ohm
+      rseff = 6.95611 Ohm
+       rgbd = 0 Ohm
+      igidl = -0 A
+      igisl = -0 A
+       igdt = -688.268 aA
+        igd = -251.274 aA
+        igs = -436.844 aA
+        igb = -160.881e-24 A
+     igbacc = -60.4051e-36 A
+     igbinv = -160.881e-24 A
+       igcs = -76.2879e-21 A
+       igcd = -73.3347e-21 A
+       isub = 2.47693e-21 A
+        gbs = 109.772 aS
+        gbd = 3.49184 fS
+         qg = -145.61 aCoul
+         qd = 30.2445 aCoul
+         qs = 41.5097 aCoul
+         qb = 73.8557 aCoul
+        qjd = 60.3167 aCoul
+        qjs = 2.69045e-21 Coul
+     qgdovl = -23.394 aCoul
+     qgsovl = -31.7268 aCoul
+        qgi = -145.61 aCoul
+        qdi = 30.2445 aCoul
+        qsi = 41.5097 aCoul
+        qbi = 73.8557 aCoul
+        ide = -1.00578 uA
+        ige = -688.268 aA
+        ise = 1.00578 uA
+        ibe = 498.929 aA
+        idb = 498.925 aA
+        isb = 768.006e-24 A
+        vsb = -0 V
+        gmb = 3.93551 uS
+        vgt = -126.305 mV
+       vdss = -133.988 mV
+  vsat_marg = 28.9639 mV
+  self_gain = 14.4693
+       rout = 1.16267 MOhm
+       beff = 126.093 uA/V^2
+        fug = 5.15701 GHz
+      rgate = 0 Ohm
+     vearly = 1.16939 V
+
+Instance: I1.PM14 of AZC
+Model: p18
+Primitive: bsim4
+          d : V(I1.net046) = 1.34533 V
+          g : V(I1.IBIASP1) = 1.18437 V
+          s : V(VDD) = 1.8 V
+          b : V(VDD) = 1.8 V
+     region = sat
+      trise = 0 C
+      dtemp = 0 C
+   reversed = no
+        ids = -7.50146 uA
+        vgs = -615.635 mV
+        vds = -454.671 mV
+        vbs = 0 V
+        vgd = -160.963 mV
+        vdb = -454.671 mV
+        vgb = -615.635 mV
+        vth = -479.832 mV
+      vdsat = -146.209 mV
+         gm = 87.0602 uS
+        gds = 2.78013 uS
+       gmbs = 29.232 uS
+    betaeff = 703.976 uA/V^2
+        cjd = 1.54346 fF
+        cjs = 1.86716 fF
+        cgg = 2.19867 fF
+        cgd = -753.68 aF
+        cgs = -1.36217 fF
+        cgb = -82.8165 aF
+        cdg = -992.864 aF
+        cdd = 755.453 aF
+        cds = 318.234 aF
+        cdb = -80.8227 aF
+        csg = -1.12002 fF
+        csd = -2.88553 aF
+        css = 1.24332 fF
+        csb = -120.421 aF
+        cbg = -85.7905 aF
+        cbd = 1.11319 aF
+        cbs = -199.383 aF
+        cbb = 284.061 aF
+     covlgs = 767.752 aF/m
+     covlgd = 756.391 aF/m
+     covlgb = 0 F/m
+      cggbo = 674.528 aF
+      cgdbo = 2.71073 aF
+      cgsbo = -594.422 aF
+      cbgbo = -85.7905 aF
+      cbdbo = 1.11319 aF
+      cbsbo = -199.383 aF
+      cdgbo = -236.473 aF
+      cddbo = -938.389e-21 F
+      cdsbo = 318.234 aF
+        ron = 60.611 kOhm
+         id = -7.50146 uA
+      ibulk = 10.7251 fA
+        pwr = 3.4107 uW
+   gmoverid = 11.6058 1/V
+       ueff = 10.756e-03
+      rdeff = 1.13764 Ohm
+      rseff = 1.13764 Ohm
+       rgbd = 0 Ohm
+      igidl = -0 A
+      igisl = -0 A
+       igdt = -2.50221 fA
+        igd = -184.872 aA
+        igs = -2.31653 fA
+        igb = -1.27504e-21 A
+     igbacc = -304.658e-36 A
+     igbinv = -1.27504e-21 A
+       igcs = -412.873e-21 A
+       igcd = -393.728e-21 A
+       isub = 52.9324e-21 A
+        gbs = 158.318 aS
+        gbd = 33.5402 fS
+         qg = -823.659 aCoul
+         qd = 92.0189 aCoul
+         qs = 242.205 aCoul
+         qb = 489.435 aCoul
+        qjd = 767.301 aCoul
+        qjs = 15.9343e-21 Coul
+     qgdovl = -48.5684 aCoul
+     qgsovl = -177.322 aCoul
+        qgi = -823.659 aCoul
+        qdi = 92.0189 aCoul
+        qsi = 242.205 aCoul
+        qbi = 489.435 aCoul
+        ide = -7.50146 uA
+        ige = -2.50221 fA
+        ise = 7.50146 uA
+        ibe = 10.7706 fA
+        idb = 10.7706 fA
+        isb = 1.35111e-21 A
+        vsb = -0 V
+        gmb = 29.232 uS
+        vgt = -135.803 mV
+       vdss = -146.209 mV
+  vsat_marg = 308.463 mV
+  self_gain = 31.3152
+       rout = 359.696 kOhm
+       beff = 813.496 uA/V^2
+        fug = 6.30202 GHz
+      rgate = 0 Ohm
+     vearly = 2.69825 V
+
+Maximum and minimum parameter values for bsim4: 
+            trise = 0 C (same value for all instances).
+            dtemp = 0 C (same value for all instances).
+          max ids = 59.3796 uA on I1.NM17 of AZC
+          min ids = -59.3796 uA on I1.PM7 of AZC
+        min |ids| = -757.009 nA on I1.PM3 of AZC
+          max vgs = 664.638 mV on I1.NM16 of AZC
+          min vgs = -653.839 mV on I1.PM10 of AZC
+        min |vgs| = 483.871 mV on I1.NM0 of AZC
+          max vds = 1.06034 V on I1.NM15 of AZC
+          min vds = -1.26068 V on I1.PM6 of AZC
+        min |vds| = -162.952 mV on I1.PM11 of AZC
+          max vbs = 288.819 mV on I1.PM0 of AZC
+          min vbs = -499.093 mV on I1.NM3 of AZC
+        min |vbs| = 0 V on I1.NM0 of AZC
+          max vgd = 710.879 mV on I1.PM6 of AZC
+          min vgd = -561.278 mV on I1.NM15 of AZC
+        min |vgd| = 0 V on I1.PM4 of AZC
+          max vdb = 1.25426 V on I1.NM3 of AZC
+          min vdb = -1.30094 V on I1.PM0 of AZC
+        min |vdb| = -162.952 mV on I1.PM11 of AZC
+          max vgb = 1.06034 V on I1.NM2 of AZC
+          min vgb = -900 mV on I1.PM1 of AZC
+        min |vgb| = 483.871 mV on I1.NM0 of AZC
+          max vth = 606.13 mV on I1.NM2 of AZC
+          min vth = -563.619 mV on I1.PM1 of AZC
+        min |vth| = -463.48 mV on I1.PM6 of AZC
+        max vdsat = 165.575 mV on I1.NM7 of AZC
+        min vdsat = -146.209 mV on I1.PM14 of AZC
+      min |vdsat| = 65.4172 mV on I1.NM3 of AZC
+           max gm = 910.626 uS on I1.NM17 of AZC
+           min gm = 12.241 uS on I1.PM3 of AZC
+          max gds = 22.5041 uS on I1.PM7 of AZC
+          min gds = 233.897 nS on I1.NM15 of AZC
+         max gmbs = 298.336 uS on I1.PM7 of AZC
+         min gmbs = 3.03682 uS on I1.NM3 of AZC
+      max betaeff = 15.9137 mA/V^2 on I1.NM17 of AZC
+      min betaeff = 123.409 uA/V^2 on I1.PM10 of AZC
+          max cjd = 19.619 fF on I1.PM7 of AZC
+          min cjd = 232.733 aF on I1.NM22 of AZC
+          max cjs = 27.0578 fF on I1.PM7 of AZC
+          min cjs = 293.314 aF on I1.NM22 of AZC
+          max cgg = 30.1001 fF on I1.PM7 of AZC
+          min cgg = 300.143 aF on I1.NM22 of AZC
+          max cgd = -94.0388 aF on I1.NM22 of AZC
+          min cgd = -9.63778 fF on I1.PM7 of AZC
+          max cgs = -174.967 aF on I1.NM22 of AZC
+          min cgs = -18.7504 fF on I1.PM7 of AZC
+          max cgb = -11.9627 aF on I1.PM11 of AZC
+          min cgb = -1.71191 fF on I1.PM7 of AZC
+          max cdg = -126.173 aF on I1.NM22 of AZC
+          min cdg = -12.664 fF on I1.PM7 of AZC
+          max cdd = 9.66094 fF on I1.PM7 of AZC
+          min cdd = 94.2187 aF on I1.NM22 of AZC
+          max cds = 4.01769 fF on I1.PM7 of AZC
+          min cds = 39.8609 aF on I1.NM22 of AZC
+          max cdb = -7.20221 aF on I1.NM3 of AZC
+          min cdb = -1.01459 fF on I1.PM7 of AZC
+          max csg = -151.87 aF on I1.NM22 of AZC
+          min csg = -15.9057 fF on I1.PM7 of AZC
+          max csd = 1.55634 aF on I1.PM11 of AZC
+          min csd = -42.3674 aF on I1.PM7 of AZC
+        min |csd| = 52.9048e-21 F on I1.NM23 of AZC
+          max css = 17.4684 fF on I1.PM7 of AZC
+          min css = 164.068 aF on I1.NM22 of AZC
+          max csb = -10.7895 aF on I1.NM3 of AZC
+          min csb = -1.5203 fF on I1.PM7 of AZC
+          max cbg = -7.24495 aF on I1.NM16 of AZC
+          min cbg = -1.53032 fF on I1.PM7 of AZC
+          max cbd = 19.2078 aF on I1.PM7 of AZC
+          min cbd = -1.17553 aF on I1.PM11 of AZC
+        min |cbd| = -1.52032e-21 F on I1.PM2 of AZC
+          max cbs = -26.2419 aF on I1.PM10 of AZC
+          min cbs = -2.73569 fF on I1.PM7 of AZC
+          max cbb = 4.2468 fF on I1.PM7 of AZC
+          min cbb = 39.485 aF on I1.PM10 of AZC
+       max covlgs = 11.4468 fF/m on I1.PM7 of AZC
+       min covlgs = 104.311 aF/m on I1.NM23 of AZC
+       max covlgd = 9.68829 fF/m on I1.PM7 of AZC
+       min covlgd = 94.4447 aF/m on I1.NM22 of AZC
+           covlgb = 0 F/m (same value for all instances).
+        max cggbo = 8.96497 fF on I1.PM7 of AZC
+        min cggbo = 101.34 aF on I1.PM10 of AZC
+        max cgdbo = 50.5005 aF on I1.PM7 of AZC
+        min cgdbo = -6.16803 aF on I1.PM11 of AZC
+      min |cgdbo| = -58.5521e-21 F on I1.NM15 of AZC
+        max cgsbo = -70.6347 aF on I1.NM22 of AZC
+        min cgsbo = -7.30356 fF on I1.PM7 of AZC
+        max cbgbo = -7.24495 aF on I1.NM16 of AZC
+        min cbgbo = -1.53032 fF on I1.PM7 of AZC
+        max cbdbo = 19.2078 aF on I1.PM7 of AZC
+        min cbdbo = -1.17553 aF on I1.PM11 of AZC
+      min |cbdbo| = -1.52032e-21 F on I1.PM2 of AZC
+        max cbsbo = -26.2419 aF on I1.PM10 of AZC
+        min cbsbo = -2.73569 fF on I1.PM7 of AZC
+        max cdgbo = -31.7285 aF on I1.NM22 of AZC
+        min cdgbo = -2.97575 fF on I1.PM7 of AZC
+        max cddbo = 5.78722 aF on I1.PM11 of AZC
+        min cddbo = -27.3408 aF on I1.PM7 of AZC
+      min |cddbo| = -51.1877e-21 F on I1.NM5 of AZC
+        max cdsbo = 4.01769 fF on I1.PM7 of AZC
+        min cdsbo = 39.8609 aF on I1.NM22 of AZC
+          max ron = 997.572 kOhm on I1.NM3 of AZC
+          min ron = 15.1555 kOhm on I1.PM7 of AZC
+           max id = 59.3796 uA on I1.NM17 of AZC
+           min id = -59.3796 uA on I1.PM7 of AZC
+         min |id| = -757.009 nA on I1.PM3 of AZC
+        max ibulk = 567.674 fA on I1.PM6 of AZC
+        min ibulk = -1.48675 pA on I1.NM15 of AZC
+      min |ibulk| = 482.634 aA on I1.PM11 of AZC
+          max pwr = 53.4459 uW on I1.NM17 of AZC
+          min pwr = 163.894 nW on I1.PM11 of AZC
+     max gmoverid = 19.3142 1/V on I1.NM3 of AZC
+     min gmoverid = 7.99599 1/V on I1.NM7 of AZC
+         max ueff = 49.436e-03 on I1.NM3 of AZC
+         min ueff = 9.80636e-03 on I1.PM6 of AZC
+        max rdeff = 7.83206 Ohm on I1.NM5 of AZC
+        min rdeff = 150.099 mOhm on I1.PM7 of AZC
+        max rseff = 7.83206 Ohm on I1.NM5 of AZC
+        min rseff = 150.099 mOhm on I1.PM7 of AZC
+             rgbd = 0 Ohm (same value for all instances).
+        max igidl = 8.60089e-39 A on I1.NM15 of AZC
+        min igidl = -12.3943e-30 A on I1.PM6 of AZC
+      min |igidl| = 0 A on I1.NM0 of AZC
+            igisl = 0 A (same value for all instances).
+         max igdt = 109.095 fA on I1.NM16 of AZC
+         min igdt = -15.3478 fA on I1.PM7 of AZC
+       min |igdt| = -518.719 aA on I1.PM4 of AZC
+          max igd = 32.1463 fA on I1.NM6 of AZC
+          min igd = -88.7518 fA on I1.NM17 of AZC
+        min |igd| = -92.8404e-24 A on I1.PM4 of AZC
+          max igs = 151.027 fA on I1.NM17 of AZC
+          min igs = -29.0374 fA on I1.PM7 of AZC
+        min |igs| = -436.844 aA on I1.PM11 of AZC
+          max igb = 2.01195e-21 A on I1.NM17 of AZC
+          min igb = -9.00314e-21 A on I1.PM7 of AZC
+        min |igb| = 29.7121e-24 A on I1.NM6 of AZC
+       max igbacc = 1.03096e-33 A on I1.NM17 of AZC
+       min igbacc = -4.10823e-33 A on I1.PM7 of AZC
+     min |igbacc| = 40.0615e-36 A on I1.NM6 of AZC
+       max igbinv = 2.01195e-21 A on I1.NM17 of AZC
+       min igbinv = -9.00314e-21 A on I1.PM7 of AZC
+     min |igbinv| = 29.7121e-24 A on I1.NM6 of AZC
+         max igcs = 2.26976 aA on I1.NM17 of AZC
+         min igcs = -3.92447 aA on I1.PM7 of AZC
+       min |igcs| = 64.6118e-21 A on I1.NM23 of AZC
+         max igcd = 2.19777 aA on I1.NM17 of AZC
+         min igcd = -3.7936 aA on I1.PM7 of AZC
+       min |igcd| = 63.0876e-21 A on I1.NM23 of AZC
+         max isub = 1.41154 pA on I1.NM15 of AZC
+         min isub = 913.158e-24 A on I1.NM6 of AZC
+          max gbs = 287.008 fS on I1.NM17 of AZC
+          min gbs = 106.798 aS on I1.PM10 of AZC
+          max gbd = 997.78 fS on I1.PM7 of AZC
+          min gbd = 3.49184 fS on I1.PM11 of AZC
+           max qg = 4.07524 fCoul on I1.NM14 of AZC
+           min qg = -9.71596 fCoul on I1.PM7 of AZC
+         min |qg| = 127.105 aCoul on I1.NM22 of AZC
+           max qd = 92.0189 aCoul on I1.PM14 of AZC
+           min qd = -562.456 aCoul on I1.PM7 of AZC
+         min |qd| = 1.18334 aCoul on I1.NM2 of AZC
+           max qs = 3.01543 fCoul on I1.PM7 of AZC
+           min qs = -582.504 aCoul on I1.NM17 of AZC
+         min |qs| = -18.5474 aCoul on I1.NM23 of AZC
+           max qb = 7.26299 fCoul on I1.PM7 of AZC
+           min qb = -3.70544 fCoul on I1.NM14 of AZC
+         min |qb| = 73.8557 aCoul on I1.PM11 of AZC
+          max qjd = 20.3959 fCoul on I1.PM7 of AZC
+          min qjd = -5.40686 fCoul on I1.NM17 of AZC
+        min |qjd| = -49.9927 aCoul on I1.NM6 of AZC
+          max qjs = 271.144 aCoul on I1.PM1 of AZC
+          min qjs = -181.874 aCoul on I1.NM3 of AZC
+        min |qjs| = 1.82882e-21 Coul on I1.PM3 of AZC
+       max qgdovl = 1.00866 fCoul on I1.PM7 of AZC
+       min qgdovl = -158.252 aCoul on I1.NM17 of AZC
+     min |qgdovl| = 584.153e-21 Coul on I1.NM7 of AZC
+       max qgsovl = 358.073 aCoul on I1.NM17 of AZC
+       min qgsovl = -2.34672 fCoul on I1.PM7 of AZC
+     min |qgsovl| = 12.8569 aCoul on I1.NM23 of AZC
+          max qgi = 4.07524 fCoul on I1.NM14 of AZC
+          min qgi = -9.71596 fCoul on I1.PM7 of AZC
+        min |qgi| = 127.105 aCoul on I1.NM22 of AZC
+          max qdi = 92.0189 aCoul on I1.PM14 of AZC
+          min qdi = -562.456 aCoul on I1.PM7 of AZC
+        min |qdi| = 1.18334 aCoul on I1.NM2 of AZC
+          max qsi = 3.01543 fCoul on I1.PM7 of AZC
+          min qsi = -582.504 aCoul on I1.NM17 of AZC
+        min |qsi| = -18.5474 aCoul on I1.NM23 of AZC
+          max qbi = 7.26299 fCoul on I1.PM7 of AZC
+          min qbi = -3.70544 fCoul on I1.NM14 of AZC
+        min |qbi| = 73.8557 aCoul on I1.PM11 of AZC
+          max ide = 59.3796 uA on I1.NM17 of AZC
+          min ide = -59.3796 uA on I1.PM7 of AZC
+        min |ide| = -757.009 nA on I1.PM3 of AZC
+          max ige = 109.095 fA on I1.NM16 of AZC
+          min ige = -15.3478 fA on I1.PM7 of AZC
+        min |ige| = -518.719 aA on I1.PM4 of AZC
+          max ise = 59.3796 uA on I1.PM7 of AZC
+          min ise = -59.3796 uA on I1.NM17 of AZC
+        min |ise| = 757.009 nA on I1.PM3 of AZC
+          max ibe = 567.8 fA on I1.PM6 of AZC
+          min ibe = -1.48685 pA on I1.NM15 of AZC
+        min |ibe| = 498.929 aA on I1.PM11 of AZC
+          max idb = 487.07 fA on I1.PM7 of AZC
+          min idb = 498.925 aA on I1.PM11 of AZC
+          max isb = 10.8289 fA on I1.NM3 of AZC
+          min isb = 370.246e-24 A on I1.PM3 of AZC
+          max vsb = 499.093 mV on I1.NM3 of AZC
+          min vsb = -288.819 mV on I1.PM0 of AZC
+        min |vsb| = -0 V on I1.NM0 of AZC
+          max gmb = 298.336 uS on I1.PM7 of AZC
+          min gmb = 3.03682 uS on I1.NM3 of AZC
+          max vgt = 180.657 mV on I1.NM7 of AZC
+          min vgt = -135.803 mV on I1.PM14 of AZC
+        min |vgt| = 1.34007 mV on I1.NM1 of AZC
+         max vdss = 165.575 mV on I1.NM7 of AZC
+         min vdss = -146.209 mV on I1.PM14 of AZC
+       min |vdss| = 65.4172 mV on I1.NM3 of AZC
+    max vsat_marg = 1.15116 V on I1.PM6 of AZC
+    min vsat_marg = 28.9639 mV on I1.PM11 of AZC
+    max self_gain = 274.393 on I1.NM15 of AZC
+    min self_gain = 14.4693 on I1.PM11 of AZC
+         max rout = 4.27539 MOhm on I1.NM15 of AZC
+         min rout = 44.4363 kOhm on I1.PM7 of AZC
+         max beff = 2.15394 A/V^2 on I1.NM1 of AZC
+         min beff = 126.093 uA/V^2 on I1.PM11 of AZC
+          max fug = 37.8697 GHz on I1.NM16 of AZC
+          min fug = 1.79564 GHz on I1.NM15 of AZC
+            rgate = 0 Ohm (same value for all instances).
+       max vearly = 16.0326 V on I1.NM14 of AZC
+       min vearly = 1.16939 V on I1.PM11 of AZC
+
+
+Instance: C0
+Model: capacitor
+Primitive: capacitor
+          1 : V(VOUT) = 900.072 mV
+          2 : V(VSS) = 0 V
+        cap = 10 nF
+
+Instance: I1.C0 of AZC
+Model: capacitor
+Primitive: capacitor
+          1 : V(I1.net135) = 499.093 mV
+          2 : V(VOUT) = 900.072 mV
+        cap = 936 fF
+
+Instance: I1.C5 of AZC
+Model: capacitor
+Primitive: capacitor
+          1 : V(I1.net125) = 664.638 mV
+          2 : V(VSS) = 0 V
+        cap = 918 fF
+
+Maximum and minimum parameter values for capacitor: 
+          max cap = 10 nF on C0
+          min cap = 918 fF on I1.C5 of AZC
+
+
+Instance: I0
+Model: isource
+Primitive: isource
+       sink : V(VDD) = 1.8 V
+        src : V(IBIAS) = 683.871 mV
+          i = 1 uA
+          v = 1.11613 V
+        pwr = 1.11613 uW
+
+
+Instance: I1.R0 of AZC
+Model: resistor
+Primitive: resistor
+          1 : V(IBIAS) = 683.871 mV
+          2 : V(I1.IBIAS2) = 483.871 mV
+          v = 200 mV
+          i = 1 uA
+        res = 200 kOhm
+        pwr = 200 nW
+
+Instance: I1.R1 of AZC
+Model: resistor
+Primitive: resistor
+          1 : V(I1.IBIASP1) = 1.18437 V
+          2 : V(I1.IBIASP2) = 983.209 mV
+          v = 201.156 mV
+          i = 1.00578 uA
+        res = 200 kOhm
+        pwr = 202.319 nW
+
+Instance: I1.R8 of AZC
+Model: resistor
+Primitive: resistor
+          1 : V(I1.net057) = 1.0602 V
+          2 : V(I1.net046) = 1.34533 V
+          v = -285.125 mV
+          i = -3.75164 uA
+        res = 76 kOhm
+        pwr = 1.06968 uW
+
+Instance: I1.R9 of AZC
+Model: resistor
+Primitive: resistor
+          1 : V(I1.net055) = 1.06034 V
+          2 : V(I1.net046) = 1.34533 V
+          v = -284.987 mV
+          i = -3.74982 uA
+        res = 76 kOhm
+        pwr = 1.06865 uW
+
+Instance: I1.R11 of AZC
+Model: resistor
+Primitive: resistor
+          1 : V(I1.net031) = 664.638 mV
+          2 : V(I1.net125) = 664.638 mV
+          v = 17.2531 nV
+          i = 103.935 fA
+        res = 166 kOhm
+        pwr = 1.7932e-21 W
+
+Maximum and minimum parameter values for resistor: 
+            max v = 201.156 mV on I1.R1 of AZC
+            min v = -285.125 mV on I1.R8 of AZC
+          min |v| = 17.2531 nV on I1.R11 of AZC
+            max i = 1.00578 uA on I1.R1 of AZC
+            min i = -3.75164 uA on I1.R8 of AZC
+          min |i| = 103.935 fA on I1.R11 of AZC
+          max res = 200 kOhm on I1.R0 of AZC
+          min res = 76 kOhm on I1.R8 of AZC
+          max pwr = 1.06968 uW on I1.R8 of AZC
+          min pwr = 1.7932e-21 W on I1.R11 of AZC
+
+
+Instance: V0
+Model: vsource
+Primitive: vsource
+          p : V(VSS) = 0 V
+          n : val(0) = 0 
+          v = 0 V
+          i = 95.4322 uA
+        pwr = 0 W
+
+Instance: V1
+Model: vsource
+Primitive: vsource
+          p : V(VDD) = 1.8 V
+          n : val(0) = 0 
+          v = 1.8 V
+          i = -95.4322 uA
+        pwr = -171.778 uW
+
+Instance: V2
+Model: vsource
+Primitive: vsource
+          p : V(VINP) = 900 mV
+          n : val(0) = 0 
+          v = 900 mV
+          i = 600.868 aA
+        pwr = 540.781 aW
+
+Maximum and minimum parameter values for vsource: 
+            max v = 1.8 V on V1
+            min v = 0 V on V0
+            max i = 95.4322 uA on V0
+            min i = -95.4322 uA on V1
+          min |i| = 600.868 aA on V2
+          max pwr = 540.781 aW on V2
+          min pwr = -171.778 uW on V1
+        min |pwr| = 0 W on V0
+
+
+Total Power Dissipation = 170.662 uW.
+
+
+Convergence achieved in 2 iterations.
+DC simulation time: CPU = 56.736 ms, elapsed = 28.583 ms.
+Total time required for dc analysis `dcmeas': CPU = 56.814 ms, elapsed = 28.6219 ms.
+Time accumulated: CPU = 743.744 ms, elapsed = 460.363 ms.
+Peak resident memory used = 95.6 Mbytes.
+
+
+*********************************************
+DC Analysis `dcmeas_t': temp = (0 C -> 100 C)
+*********************************************
+
+Notice from spectre during DC analysis `dcmeas_t', during task `MDLControl'.
+    No outputs were found. Loosening output filter criterion to `allpub'.
+
+
+Opening the PSF file ./test.raw/dcmeas_t.dc ...
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 0 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 100 aS
+Trying `homotopy = gmin'.
+
+Notice from spectre at temp = 0 C during DC analysis `dcmeas_t', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+Notice from spectre at temp = 5 C during DC analysis `dcmeas_t', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+
+..........
+
+Notice from spectre at temp = 10 C during DC analysis `dcmeas_t', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+
+..................9
+
+Notice from spectre at temp = 15 C during DC analysis `dcmeas_t', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+
+..................9..........
+
+Notice from spectre at temp = 20 C during DC analysis `dcmeas_t', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+        Further occurrences of this notice will be suppressed.
+
+..................9..................8..................7..................6..................5..................4..................3..................2..................1..................0
+
+Maximum value achieved for any signal of each quantity: 
+V: V(VDD) = 1.8 V
+I: I(V1:p) = 82.12 uA
+DC simulation time: CPU = 51.181 ms, elapsed = 26.2432 ms.
+
+Notice from spectre at temp = 100 C during DC analysis `dcmeas_t', during task `MDLControl'.
+    The value of parameter 'temp' has been reset to the original value 27.
+
+Total time required for dc analysis `dcmeas_t': CPU = 51.265 ms, elapsed = 26.2861 ms.
+Time accumulated: CPU = 796.555 ms, elapsed = 487.436 ms.
+Peak resident memory used = 95.8 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    16 notices suppressed.
+
+
+*****************************************************
+DC Analysis `dcmeas_ICMR1': input_dc = (0 -> 900e-03)
+*****************************************************
+
+Notice from spectre during DC analysis `dcmeas_ICMR1', during task `MDLControl'.
+    No outputs were found. Loosening output filter criterion to `allpub'.
+
+
+Opening the PSF file ./test.raw/dcmeas_ICMR1.dc ...
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 100 aS
+
+Notice from spectre at input_dc = 0 during DC analysis `dcmeas_ICMR1', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+Notice from spectre at input_dc = 1e-03 during DC analysis `dcmeas_ICMR1', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+Notice from spectre at input_dc = 2e-03 during DC analysis `dcmeas_ICMR1', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+Notice from spectre at input_dc = 3e-03 during DC analysis `dcmeas_ICMR1', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+
+.
+
+Notice from spectre at input_dc = 4e-03 during DC analysis `dcmeas_ICMR1', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+        Further occurrences of this notice will be suppressed.
+
+..................9..................8..................7..................6..................5..................4..................3..................2..................1..................0
+
+Maximum value achieved for any signal of each quantity: 
+V: V(VDD) = 1.8 V
+I: I(V1:p) = 95.43 uA
+DC simulation time: CPU = 488.38 ms, elapsed = 244.981 ms.
+
+Notice from spectre at input_dc = 900e-03 during DC analysis `dcmeas_ICMR1', during task `MDLControl'.
+    The value of parameter 'input_dc' has been reset to the original value 0.9.
+
+Total time required for dc analysis `dcmeas_ICMR1': CPU = 488.629 ms, elapsed = 245.107 ms.
+Time accumulated: CPU = 1.28675 s, elapsed = 733.356 ms.
+Peak resident memory used = 95.8 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    896 notices suppressed.
+
+
+*******************************************************
+DC Analysis `dcmeas_ICMR2': input_dc = (900e-03 -> 1.8)
+*******************************************************
+
+Notice from spectre during DC analysis `dcmeas_ICMR2', during task `MDLControl'.
+    No outputs were found. Loosening output filter criterion to `allpub'.
+
+
+Opening the PSF file ./test.raw/dcmeas_ICMR2.dc ...
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 100 aS
+
+Notice from spectre at input_dc = 900e-03 during DC analysis `dcmeas_ICMR2', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+Notice from spectre at input_dc = 901e-03 during DC analysis `dcmeas_ICMR2', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+Notice from spectre at input_dc = 902e-03 during DC analysis `dcmeas_ICMR2', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+Notice from spectre at input_dc = 903e-03 during DC analysis `dcmeas_ICMR2', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+
+.
+
+Notice from spectre at input_dc = 904e-03 during DC analysis `dcmeas_ICMR2', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+        Further occurrences of this notice will be suppressed.
+
+..................9..................8..................7..................6..................5..................4..................3..................2..................1..................0
+
+Maximum value achieved for any signal of each quantity: 
+V: V(VINP) = 1.8 V
+I: I(V0:p) = 84.77 uA
+DC simulation time: CPU = 482.643 ms, elapsed = 242.189 ms.
+
+Notice from spectre at input_dc = 1.8 during DC analysis `dcmeas_ICMR2', during task `MDLControl'.
+    The value of parameter 'input_dc' has been reset to the original value 0.9.
+
+Total time required for dc analysis `dcmeas_ICMR2': CPU = 482.738 ms, elapsed = 242.238 ms.
+Time accumulated: CPU = 1.77094 s, elapsed = 976.35 ms.
+Peak resident memory used = 95.8 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    896 notices suppressed.
+
+
+*****************************************************
+Noise Analysis `Noisemeas': freq = (100 mHz -> 1 MHz)
+*****************************************************
+
+Notice from spectre during Noise analysis `Noisemeas', during task `MDLControl'.
+    No outputs were found. Loosening output filter criterion to `allpub'.
+Notice from spectre during DC analysis, during Noise analysis `Noisemeas', during task `MDLControl'.
+    Bad pivoting is found during DC analysis. Option dc_pivot_check=yes is recommended for possible improvement of convergence.
+
+DC simulation time: CPU = 7.526 ms, elapsed = 3.76701 ms.
+
+Opening the PSF file ./test.raw/Noisemeas.noise ...
+..................9..................8..................7..................6..................5..................4..................3..................2..................1..................0
+Accumulated DC solution time =            0 s.
+Intrinsic noise analysis time =              0 s.
+Total time required for noise analysis `Noisemeas': CPU = 25.371 ms, elapsed = 16.0389 ms.
+Time accumulated: CPU = 1.79804 s, elapsed = 993.263 ms.
+Peak resident memory used = 96.1 Mbytes.
+
+
+Aggregate audit (12:04:25 PM, Tue May 28, 2024):
+Time used: CPU = 1.82 s, elapsed = 1.82 s, util. = 100%.
+Time spent in licensing: elapsed = 10.2 ms.
+Peak memory used = 96.7 Mbytes.
+Simulation started at: 12:04:24 PM, Tue May 28, 2024, ended at: 12:04:25 PM, Tue May 28, 2024, with elapsed time (wall clock): 1.82 s.
+spectre completes with 0 errors, 6 warnings, and 31 notices.

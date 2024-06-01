@@ -1,0 +1,38 @@
+simulator lang=spectre
+global 0
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=bjt_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=dio_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=res_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=mim_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=var_tt
+
+subckt folded_cascode VINN VINP VOUT IBIAS VDD VSS
+NM3 (VOUT IBIAS net135 VSS) n18 w=1.26e-06 l=2.8e-07 m=1 //// *Load* *gm1* ``NM2``
+NM2 (net050 IBIAS net134 VSS) n18 w=1.26e-06 l=2.8e-07 m=1 //// *Load* *gm1* ``NM3``
+NM22 (IBIASP2 IBIAS net140 VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+NM5 (IBIAS2 IBIAS net141 VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+NM1 (net134 IBIAS2 VSS VSS) n18 w=3.08e-06 l=3.5e-07 m=1 //// *Load* *gm1* ``NM0``
+NM23 (net140 IBIAS2 VSS VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+NM6 (net141 IBIAS2 VSS VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+NM0 (net135 IBIAS2 VSS VSS) n18 w=3.08e-06 l=3.5e-07 m=1 //// *Load* *gm1* ``NM1``
+R0 (IBIAS IBIAS2) resistor r=100000.00000000001////Bias Resistor, should not change
+R1 (IBIASP1 IBIASP2) resistor r=100000.00000000001////Bias Resistor, should not change
+PM4 (net050 net050 VDD VDD) p18 w=2.92e-06 l=6.1e-07 m=1 //// *Load* *gm1* ``PM3``
+PM3 (VOUT net050 VDD VDD) p18 w=2.92e-06 l=6.1e-07 m=1 //// *Load* *gm1* ``PM4``
+PM2 (net118 IBIASP1 VDD VDD) p18 w=4.06e-06 l=3.8e-07 m=1 //// *Current tail* *gm1*
+PM11 (net139 IBIASP1 VDD VDD) p18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+PM1 (net135 VINN net118 VDD) p18 w=2.83e-06 l=2.2e-07 m=1 //// *Input* *gm1* ``PM0``
+PM0 (net134 VINP net118 VDD) p18 w=2.83e-06 l=2.2e-07 m=1 //// *Input* *gm1* ``PM1``
+PM10 (IBIASP1 IBIASP2 net139 VDD) p18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+ends folded_cascode
+
+
+            V0 (VSS 0) vsource dc=0 type=dc
+            V1 (VDD 0) vsource dc=1.8 type=dc
+            C0 (VOUT VSS) capacitor c=5e-12
+            I0 (VDD IBIAS) isource dc=2e-06 type=dc
+            V2 (VINP 0) vsource dc=0.9 type=dc
+            IPRB0 (VINN VOUT) iprobe
+            I1 (VINN VINP VOUT IBIAS VDD VSS) folded_cascode
+            

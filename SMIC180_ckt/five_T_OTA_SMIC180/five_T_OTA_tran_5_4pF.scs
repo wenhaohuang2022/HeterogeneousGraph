@@ -1,0 +1,33 @@
+simulator lang=spectre
+global 0
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=bjt_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=dio_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=res_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=mim_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=var_tt
+
+subckt five_T_OTA VINN VINP VOUT IBIAS VDD VSS
+PM11 (net047 IBIASP1 VDD VDD) p18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+PM10 (IBIASP1 IBIASP2 net047 VDD) p18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+PM18 (VOUT net036 VDD VDD) p18 w=6.82e-06 l=3.1e-07 m=1 //// *Load* *gm1* ``PM19``
+PM19 (net036 net036 VDD VDD) p18 w=6.82e-06 l=3.1e-07 m=1 //// *Load* *gm1* ``PM18``
+NM23 (net045 IBIAS2 VSS VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+NM22 (IBIASP2 IBIAS net045 VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+NM17 (net036 VINP net035 VSS) n18 w=6.81e-06 l=3.7e-07 m=1 //// *Input* *gm1* ``NM18``
+NM18 (VOUT VINN net035 VSS) n18 w=6.81e-06 l=3.7e-07 m=1 //// *Input* *gm1* ``NM17``
+NM19 (net035 IBIAS2 VSS VSS) n18 w=6.34e-06 l=7.5e-07 m=1 //// *Current tail* *gm1*
+NM6 (net049 IBIAS2 VSS VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+NM5 (IBIAS2 IBIAS net049 VSS) n18 w=2.2e-07 l=1.8e-07 ////Bias Transistor, should not change
+R1 (IBIASP1 IBIASP2) resistor r=100000.00000000001////Bias Resistor, should not change
+R0 (IBIAS IBIAS2) resistor r=100000.00000000001////Bias Resistor, should not change
+ends five_T_OTA
+
+
+            V0 (VSS 0) vsource dc=0 type=dc
+            V1 (VDD 0) vsource dc=1.8 type=dc
+            C0 (VOUT VSS) capacitor c=4e-12
+            I0 (VDD IBIAS) isource dc=2e-06 type=dc
+            I1 (VOUT VINP VOUT IBIAS VDD VSS) five_T_OTA
+            V2 (VINP 0) vsource type=pulse val0=1.2 val1=0.6 period=2e-05 rise=1p fall=1p
+        

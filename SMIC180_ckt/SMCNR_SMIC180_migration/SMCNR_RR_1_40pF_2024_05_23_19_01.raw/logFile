@@ -1,0 +1,47 @@
+HEADER
+"PSFversion" "1.00"
+"Log Generator" "drlLog rev. 1.0"
+"Log Time Stamp" "Thu May 23 20:34:03 2024"
+"psfversion" ""
+"simulator" "spectre"
+"version" "20.1.0.073.isr1"
+"date" "8:34:03 PM, Thur May 23, 2024"
+"design" "(no title)"
+"signalNameType" "spectre"
+"simMode" "Spectre"
+"measdgt" 0
+"ingold" 2
+"sst2usecolon" 0
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING *
+)
+VALUE
+"CMRRmeas-ac" "analysisInst" (
+"ac"
+"CMRRmeas.ac"
+"PSF"
+""
+("freq")
+"AC Analysis `CMRRmeas': freq = (100 mHz -> 1 GHz)"
+) PROP(
+"data_type" "swept_scalar"
+)
+
+"PSRRmeas-ac" "analysisInst" (
+"ac"
+"PSRRmeas.ac"
+"PSF"
+""
+("freq")
+"AC Analysis `PSRRmeas': freq = (100 mHz -> 1 GHz)"
+) PROP(
+"data_type" "swept_scalar"
+)
+
+END

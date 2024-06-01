@@ -1,0 +1,31 @@
+simulator lang=spectre
+global 0
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=bjt_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=dio_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=res_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=mim_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=var_tt
+
+subckt SMCNR VINN VINP VOUT IBIAS VDD VSS
+NM4 (VOUT IBIAS VSS VSS) n18 w=3.35e-06 l=1.9e-07 m=1 //// Load transistor, 2nd stage
+NM0 (net27 VINN net26 VSS) n18 w=2.9e-07 l=4.5e-07 m=1 //// Input transistor, 1st stage
+NM3 (IBIAS IBIAS VSS VSS) n18 w=2.4e-07 l=1.9e-07 m=1 //// Bias transistor
+NM2 (net26 IBIAS VSS VSS) n18 w=9.4e-07 l=2.6e-07 m=1 //// Current transistor, 1st stage
+NM1 (net28 VINP net26 VSS) n18 w=9.7e-07 l=8.6e-07 m=1 //// Input transistor, 1st stage
+PM2 (VOUT net28 VDD VDD) p18 w=1.38e-05 l=3.1e-07 m=1 //// Input transistor, 2nd stage
+PM1 (net27 net27 VDD VDD) p18 w=9.9e-07 l=3e-07 m=1 //// Load transistor, 1st stage
+PM0 (net28 net27 VDD VDD) p18 w=6.5e-07 l=3e-07 m=1 //// Load transistor, 1st stage
+C0 (net28 net29) capacitor c=9.5e-13 m=1 //// Miller cap
+R0 (net29 VOUT) resistor r=2850.0 m=1 //// Nulling resistor
+ends SMCNR
+
+
+
+            V0 (VSS 0) vsource dc=0 type=dc
+            V1 (VDD 0) vsource dc=1.8 type=dc
+            C0 (VOUT VSS) capacitor c=1e-11
+            I0 (VDD IBIAS) isource dc=2e-06 type=dc
+            I1 (VOUT VINP VOUT IBIAS VDD VSS) SMCNR
+            V2 (VINP 0) vsource type=pulse val0=1.2 val1=0.6 period=3.3333333333333335e-05 rise=1p fall=1p
+        

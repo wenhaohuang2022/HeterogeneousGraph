@@ -1,0 +1,5 @@
+$ Simulator: spectre (ver. 20.1.0.073.isr1)
+.title '(no title)'
+min_vdiff max_vdiff alter# 
+0.0133401 failed 4 
+

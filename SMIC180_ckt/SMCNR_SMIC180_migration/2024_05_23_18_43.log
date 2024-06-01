@@ -1,0 +1,1 @@
+{'DC_gain': 74.0091, 'GBW_VOUT': 1126920.0, 'GM_VOUT': -42.13, 'PM_VOUT': 61.5855, 'UGB': 983002.0, 'Pdiss': 6.00188e-05, 'vos': 2.89639e-05, 'vos_diff': 7.13878e-05, 'max_vdiff': 1.8, 'min_vdiff': 0, 'noise_in': 1.97896e-07, 'noise_out': 1.97645e-07, 'SR_N': 1.26095, 'SR_P': 1.21919, 'TR': 2.855e-07, 'CMRR_ac': 74.2255, 'CMRR_dc': 74.2255, 'PSRR_ac': 40.543, 'PSRR_dc': 50.2995}

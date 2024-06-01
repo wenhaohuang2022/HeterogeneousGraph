@@ -1,0 +1,39 @@
+simulator lang=spectre
+global 0
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib" section=tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib" section=bjt_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib" section=dio_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib" section=res_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib" section=mim_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_oa_cds_v1.11_4/models/spectre/ms018_enhanced_v1p11_spe.lib" section=var_tt
+
+subckt NMCF VINN VINP VOUT IBIAS VDD VSS
+NM9 (net041 net035 VSS VSS) n18 w=2.3e-07 l=2.5e-07 m=1 ////**Load** transistor, 2nd stage.
+NM7 (IBIASP IBIAS VSS VSS) n18 w=2.2e-07 l=1.8e-07 ////bias transistor. should not be changed
+NM6 (IBIAS IBIAS VSS VSS) n18 w=2.2e-07 l=1.8e-07  ////bias transistor. should not be changed
+NM4 (VOUT net041 VSS VSS) n18 w=1.28e-06 l=1.9e-07 m=1 ////**Input** transistor, Load(gm3) stage.
+NM0 (net27 VINN net26 VSS) n18 w=2.4e-07 l=3.4e-07 m=1 ////**Input** transistor, 1st stage. ``NM1``
+NM8 (net035 net035 VSS VSS) n18 w=2.9e-07 l=6.9e-07 m=1 ////**Load** transistor, 2nd stage.
+NM2 (net26 IBIAS VSS VSS) n18 w=2.4e-07 l=5.8e-07 m=1 ////current tail transistor, 1st stage
+NM1 (net28 VINP net26 VSS) n18 w=2.4e-07 l=3.4e-07 m=1 ////**Input** transistor, 1st stage. ``NM0``
+PM9 (VOUT net28 VDD VDD) p18 w=3.4e-07 l=1.9e-07 m=1 ////the **Input** transistor, gmf2 stage.
+PM8 (net035 net28 VDD VDD) p18 w=1.21e-06 l=2.7e-07 m=1 ////**Input** transistor, 2nd stage.
+PM7 (net041 IBIASP VDD VDD) p18 w=4.4e-07 l=2.4e-07 m=1 ////**Load** transistor, 2nd stage.
+PM6 (IBIASP IBIASP VDD VDD) p18 w=2.2e-07 l=1.8e-07 ////bias transistor. should not be changed
+PM2 (VOUT IBIASP VDD VDD) p18 w=3.53e-06 l=1.9e-07 m=1 ////**Load** transistor, Load(gm3) stage.
+PM1 (net27 net27 VDD VDD) p18 w=2.8e-07 l=2.8e-07 m=1 ////**Load** transistor, 1st(gm1) stage. ``PM0``
+PM0 (net28 net27 VDD VDD) p18 w=2.8e-07 l=2.8e-07 m=1 ////**Load** transistor, 1st(gm1) stage. ``PM1``
+C1 (net041 VOUT) capacitor c=8.56e-13 m=1 ////miller cap 2
+C0 (net28 VOUT) capacitor c=5.74e-13 m=1 ////miller cap 1
+ends NMCF
+
+
+        parameters input_dc = 0.9
+        V0 (VSS 0) vsource dc=0 type=dc
+        V1 (VDD 0) vsource dc=1.8 type=dc
+        C0 (VOUT VSS) capacitor c=2e-11
+        I0 (VDD IBIAS) isource dc=1e-06 type=dc
+        V2 (VINP 0) vsource dc=input_dc type=dc
+        IPRB0 (VINN VOUT) iprobe
+        I1 (VINN VINP VOUT IBIAS VDD VSS) NMCF
+        

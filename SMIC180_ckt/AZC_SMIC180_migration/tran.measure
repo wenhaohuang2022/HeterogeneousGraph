@@ -1,0 +1,18 @@
+Exported variables from results directory:  /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/AZC_SMIC180_migration/AZC_tran_3_10000pF_2024_05_16_02_03.raw/
+
+date               :  5:30:30 PM, Thur May 23, 2024
+design             :  (no title)
+simulator          :  spectre
+version            :  20.1.0.073.isr1
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+SR_N                  =  0.488927 
+SR_P                  =  0.485545 
+TR                    =  0 
+
+
+
+
+

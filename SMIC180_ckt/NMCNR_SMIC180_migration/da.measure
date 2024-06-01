@@ -1,0 +1,45 @@
+Exported variables from results directory:  /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/NMCNR_SMIC180_migration/NMCNR_da_5_100pF_2024_05_07_04_12.raw/
+
+date               :  8:03:18 PM, Thur May 23, 2024
+design             :  (no title)
+simulator          :  spectre
+version            :  20.1.0.073.isr1
+
+
+Measurement Name   :  stbmeas
+Analysis Type      :  stb
+DC_gain               =  92.6776 
+GBW_VOUT              =  5.85527e+06 
+GM_VOUT               =  -9.38239 
+PM_VOUT               =  62.4816 
+UGB                   =  7.80137e+06 
+gm2                   =  4.62128e-05 
+gm3                   =  0.0115476 
+
+
+Measurement Name   :  dcmeas
+Analysis Type      :  dc
+Pdiss                 =  0.00153559 
+vos                   =  0.00029943 
+
+
+Measurement Name   :  dcmeas_t
+Analysis Type      :  dc
+vos_diff              =  8.35547e-07 
+
+
+Measurement Name   :  dcmeas_vos
+Analysis Type      :  dc
+max_vdiff             =  1.77251 
+min_vdiff             =  0.0233695 
+
+
+Measurement Name   :  Noisemeas
+Analysis Type      :  noise
+noise_in              =  1.95198e-07 
+noise_out             =  1.95251e-07 
+
+
+
+
+

@@ -1,0 +1,91 @@
+HEADER
+"PSFversion" "1.00"
+"Log Generator" "drlLog rev. 1.0"
+"Log Time Stamp" "Thu May 23 20:33:44 2024"
+"psfversion" ""
+"simulator" "spectre"
+"version" "20.1.0.073.isr1"
+"date" "8:33:44 PM, Thur May 23, 2024"
+"design" "(no title)"
+"signalNameType" "spectre"
+"simMode" "Spectre"
+"measdgt" 0
+"ingold" 2
+"sst2usecolon" 0
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING *
+)
+VALUE
+"stbmeas-stb" "analysisInst" (
+"stb"
+"stbmeas.stb"
+"PSF"
+""
+("freq")
+"Stability Analysis `stbmeas': freq = (100 mHz -> 10 GHz)"
+) PROP(
+"data_type" "swept_scalar"
+)
+
+"stbmeas-margin.stb" "analysisInst" (
+"margin.stb"
+"stbmeas.margin.stb"
+"PSF"
+""
+()
+"Stability Analysis `stbmeas': freq = (100 mHz -> 10 GHz)"
+) PROP(
+"data_type" "scalar"
+)
+
+"dcmeas-dc" "analysisInst" (
+"dc"
+"dcmeas.dc"
+"PSF"
+""
+()
+"DC Analysis `dcmeas'"
+) PROP(
+"data_type" "scalar"
+)
+
+"dcmeas_t-dc" "analysisInst" (
+"dc"
+"dcmeas_t.dc"
+"PSF"
+""
+("temp")
+"DC Analysis `dcmeas_t': temp = (0 C -> 100 C)"
+) PROP(
+"data_type" "scalar"
+)
+
+"dcmeas_vos-dc" "analysisInst" (
+"dc"
+"dcmeas_vos.dc"
+"PSF"
+""
+("input_dc")
+"DC Analysis `dcmeas_vos': input_dc = (0 -> 1.8)"
+) PROP(
+"data_type" "scalar"
+)
+
+"Noisemeas-noise" "analysisInst" (
+"noise"
+"Noisemeas.noise"
+"PSF"
+""
+("freq")
+"Noise Analysis `Noisemeas': freq = (100 mHz -> 1 MHz)"
+) PROP(
+"data_type" "swept_struct"
+)
+
+END

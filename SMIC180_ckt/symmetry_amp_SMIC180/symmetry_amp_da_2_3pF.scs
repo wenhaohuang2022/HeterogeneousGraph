@@ -1,0 +1,38 @@
+simulator lang=spectre
+global 0
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=bjt_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=dio_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=res_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=mim_tt
+include "/home/public/PDK/smic/18/SPDK18MSE_1833_OA_CDS_V1.11_4/smic18mse_1833_1P3M_2Ia_1TMa1_MIM10_oa_cds_2019_01_15_v1.11_4/smic18mmrf/../models/spectre/ms018_enhanced_v1p11_spe.lib" section=var_tt
+
+subckt symmetry_amp VINN VINP VOUT IBIAS VDD VSS
+NM1 (VOUT net57 VSS VSS) n18 w=2.6e-07 l=4.4e-07 m=1 //// *Load* *gm1* ``NM0``
+NM0 (net57 net57 VSS VSS) n18 w=2.6e-07 l=4.4e-07 m=1 //// *Load* *gm1* ``NM1``
+NM18 (net61 VINP net60 VSS) n18 w=2.11e-06 l=2.1e-07 m=1 //// *Input* *gm1* ``NM17``
+NM17 (net67 VINN net60 VSS) n18 w=2.11e-06 l=2.1e-07 m=1 //// *Input* *gm1* ``NM18``
+NM22 (IBIASP2 IBIAS net69 VSS) n18 w=2.2e-07 l=1.8e-07 m=1 ////Bias Transistor, should not change
+NM5 (IBIAS2 IBIAS net70 VSS) n18 w=2.2e-07 l=1.8e-07 m=1 ////Bias Transistor, should not change
+NM19 (net60 IBIAS2 VSS VSS) n18 w=8.7e-07 l=2.7e-07 m=1 //// *Current tail* *gm1*
+NM23 (net69 IBIAS2 VSS VSS) n18 w=2.2e-07 l=1.8e-07 m=1 ////Bias Transistor, should not change
+NM6 (net70 IBIAS2 VSS VSS) n18 w=2.2e-07 l=1.8e-07 m=1 ////Bias Transistor, should not change
+R0 (IBIAS IBIAS2) resistor r=100000.00000000001////Bias Resistor, should not change
+R1 (IBIASP1 IBIASP2) resistor r=100000.00000000001////Bias Resistor, should not change
+PM1 (VOUT net61 VDD VDD) p18 w=2.4e-07 l=5.9e-07 m=1 //// *Load* *gm1* ``PM0``
+PM0 (net57 net67 VDD VDD) p18 w=2.4e-07 l=5.9e-07 m=1 //// *Load* *gm1* ``PM1``
+PM11 (net68 IBIASP1 VDD VDD) p18 w=2.2e-07 l=1.8e-07 m=1 ////Bias Transistor, should not change
+PM19 (net67 net67 VDD VDD) p18 w=2.4e-07 l=5.9e-07 m=1 //// *Load* *gm1* ``PM0``
+PM18 (net61 net61 VDD VDD) p18 w=2.4e-07 l=5.9e-07 m=1 //// *Load* *gm1* ``PM0``
+PM10 (IBIASP1 IBIASP2 net68 VDD) p18 w=2.2e-07 l=1.8e-07 m=1 ////Bias Transistor, should not change
+ends symmetry_amp
+
+
+            V0 (VSS 0) vsource dc=0 type=dc
+            V1 (VDD 0) vsource dc=1.8 type=dc
+            C0 (VOUT VSS) capacitor c=3e-12
+            I0 (VDD IBIAS) isource dc=2e-06 type=dc
+            V2 (VINP 0) vsource dc=0.9 type=dc
+            IPRB0 (VINN VOUT) iprobe
+            I1 (VINN VINP VOUT IBIAS VDD VSS) symmetry_amp
+            

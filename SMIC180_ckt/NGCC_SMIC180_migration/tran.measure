@@ -1,0 +1,18 @@
+Exported variables from results directory:  /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/NGCC_SMIC180_migration/NGCC_tran_5_100pF_2024_05_08_08_38.raw/
+
+date               :  7:17:22 PM, Thur May 23, 2024
+design             :  (no title)
+simulator          :  spectre
+version            :  20.1.0.073.isr1
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+SR_N                  =  3.33739 
+SR_P                  =  3.39336 
+TR                    =  0 
+
+
+
+
+

@@ -1,0 +1,42 @@
+
+        alias measurement stbmeas{
+        run stb (start=0.1_Hz,stop=10GHz,probe=IPRB0)
+        export real GBW_VOUT=gainBwProd(VOUT/VINN)
+        export real UGB = cross(sig = db(mag(VOUT/VINN)))
+        export real PM_VOUT=ph((VOUT/VINN)@UGB,wrap='no)/3.1415926*180
+        export real GM_VOUT=db(mag(VOUT/VINN)) @cross(sig = ph(VOUT/VINN)/3.1415926*180,dir='fall,thresh=0,n=-1)
+        export real DC_gain=db(mag(VOUT/VINN)) @0.1_Hz
+        }
+
+        alias measurement dcmeas{
+        run dc (oppoint =' logfile)
+        export real Pdiss=-I(V1:1)*1.8
+        export real vos = abs(v(VINP)-v(VINN))
+        }
+        
+        alias measurement Noisemeas{
+            run noise (iprobe = V2,start=0.1,stop=1M,dec=1,terminals={"VOUT","VSS"}) as Noisefind
+            export real noise_in = rms(Noisemeas:in)
+            export real noise_out = rms(Noisemeas:out)
+        }
+
+
+        alias measurement dcmeas_ICMR1{
+        run dc (oppoint =' logfile, param = input_dc, start=0, stop=0.9, step=0.001)
+        export real min_vdiff = cross(sig = abs(v(VOUT) - input_dc), thresh = 0.0005, dir = 'cross,n=-1)
+        }
+
+        alias measurement dcmeas_ICMR2{
+        run dc (oppoint =' logfile, param = input_dc, start=0.9, stop=1.8, step=0.001)
+        export real max_vdiff = cross(sig = abs(v(VOUT) - input_dc), thresh = 0.0005, dir = 'cross,n=0)
+        }
+
+        alias measurement dcmeas_t{
+        run dc (param=temp, start=0, stop=100, step=5)
+        real vos_mini = v(VINP)-v(VINN) @0
+        real vos_maxi = v(VINP)-v(VINN) @100
+        export real vos_diff = abs(vos_maxi - vos_mini) / 100
+        }
+
+        run stbmeas,dcmeas,dcmeas_t,dcmeas_ICMR1,dcmeas_ICMR2,Noisemeas
+    

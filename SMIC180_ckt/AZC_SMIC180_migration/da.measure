@@ -1,0 +1,47 @@
+Exported variables from results directory:  /home/lcj/WORK/llm_analog-main/LLM_Analog_project/SMIC180_ckt/AZC_SMIC180_migration/AZC_da_3_10000pF_2024_05_16_02_03.raw/
+
+date               :  3:06:49 PM, Tue May 28, 2024
+design             :  (no title)
+simulator          :  spectre
+version            :  20.1.0.073.isr1
+
+
+Measurement Name   :  stbmeas
+Analysis Type      :  stb
+DC_gain               =  93.2252 
+GBW_VOUT              =  3.00015e+06 
+GM_VOUT               =  -76.7139 
+PM_VOUT               =  60.5011 
+UGB                   =  2.78584e+06 
+
+
+Measurement Name   :  dcmeas
+Analysis Type      :  dc
+Pdiss                 =  0.000171778 
+vos                   =  7.21033e-05 
+
+
+Measurement Name   :  dcmeas_t
+Analysis Type      :  dc
+vos_diff              =  9.16949e-08 
+
+
+Measurement Name   :  dcmeas_ICMR1
+Analysis Type      :  dc
+min_vdiff             =  0.00157381 
+
+
+Measurement Name   :  dcmeas_ICMR2
+Analysis Type      :  dc
+max_vdiff             =  1.33865 
+
+
+Measurement Name   :  Noisemeas
+Analysis Type      :  noise
+noise_in              =  2.72633e-07 
+noise_out             =  2.72718e-07 
+
+
+
+
+
