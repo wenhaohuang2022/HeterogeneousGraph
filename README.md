@@ -1,6 +1,6 @@
 # HeterogeneousGraph
 Use heterogeneous graph neural networks to generate analog integrated circuit 
-## 数据准备
+## 数据准备 dataset文件夹
 - SMIC180_ckt文件夹内存有大量的仿真网表，从中整理出了307张非重复的网表，存放在raw_labels文件夹内<br>
 - amp_conclusion_ABC_KG_SMIC180.txt文件中存有307张网表的仿真性能指标，作为数据集的标签<br>
 
