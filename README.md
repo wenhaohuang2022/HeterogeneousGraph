@@ -6,9 +6,10 @@ Use heterogeneous graph neural networks to generate analog integrated circuit
 
 - main.py：建立并保存数据集的主文件<br>
 - net_to_het.py：读取网表，将其转化为异构图表示<br>
-- visualization.py：可视化异构图<br>
-- load_file.py：从数据集中加载数据<br>
+- utilities.py：工具类函数存放区<br>
+- models.py：数据集模型、神经网络模型等<br>
+- demo.py：检验某些工具的功能，如加载数据集、可视化异构图和标准化节点特征<br>
 
-- ckt_dataset.pkl为最终的异构图数据集，含有307张图及其标签<br>
+- CktDataset.pkl为最终的异构图数据集，含有307张图及其标签<br>
 - graph_images文件夹内存有307张异构图的可视化图像，对应于307张网表<br>
 ## 模型搭建
