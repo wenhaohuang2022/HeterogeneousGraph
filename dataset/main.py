@@ -1,12 +1,7 @@
-import dgl
 import torch
-from dgl.data import DGLDataset
-from torch.utils.data import DataLoader
+
 from net_to_het import generate_het
-import os
-import pickle
-import numpy
-import pandas
+from utilities import *
 
 
 def process_line(line):
@@ -35,41 +30,18 @@ def read_file_and_process(file_path):
     return graphs, labels
 
 
-class HeteroGraphDataset(DGLDataset):
-    def __init__(self, graphs, labels):
-        self.graphs = graphs
-        self.labels = labels
-        super().__init__(name='hetero_graph_dataset')
-
-    def process(self):
-        pass
-
-    def __getitem__(self, idx):
-        return self.graphs[idx], self.labels[idx]
-
-    def __len__(self):
-        return len(self.graphs)
-
-
-def save_dataset(dataset, file_path):
-    with open(file_path, 'wb') as file:
-        pickle.dump((dataset.graphs, dataset.labels), file)
-
-
-def load_dataset(file_path):
-    with open(file_path, 'rb') as file:
-        graphs, labels = pickle.load(file)
-    return HeteroGraphDataset(graphs, labels)
-
-
-file_path = 'amp_conclusion_ABC_KG_SMIC180.txt'  # 应该放在同一文件夹下
-graphs, labels = read_file_and_process(file_path)
-masks = torch.ones(len(graphs), dtype=torch.bool)  # 全部掩码设置为1 掩码暂未存入
-dataset = HeteroGraphDataset(graphs, labels)
-# 数据集建立
-
-script_dir = os.path.dirname(os.path.abspath(__file__))
-save_path = os.path.join(script_dir, 'ckt_dataset.pkl')
-save_dataset(dataset, save_path)
-# 数据集保存
-
+if __name__ == '__main__':
+    file_path = 'amp_conclusion_ABC_KG_SMIC180.txt'  # 应该放在同一文件夹下
+    graphs, labels = read_file_and_process(file_path)
+    # 将所有图的掩码设置为1 掩码暂未存入
+    masks = []
+    for _ in range(len(graphs)):
+        masks.append([True])
+    masks=torch.tensor(masks)
+    dataset = HeteroGraphDataset(graphs, labels, masks)
+    # 数据集建立
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    save_path = os.path.join(script_dir, 'CktDataset.pkl')
+    save_dataset(dataset, save_path)
+    # 数据集保存
+    print(f'Dataset has been saved as {save_path}')

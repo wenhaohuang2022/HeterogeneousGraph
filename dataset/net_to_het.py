@@ -1,7 +1,14 @@
 import re
 import dgl
 import torch as th
+import os
 
+net_type = {'VINN': 1,
+            'VINP': 2,
+            'VOUT': 3,
+            'IBIAS': 4,
+            'VDD': 5,
+            'VSS': 6}
 
 def extract_col(matrix):
     # 提取第一列和第二列
@@ -66,15 +73,12 @@ def generate_het(file_path):
     nmos_name = {}
     r_name = {}
     c_name = {}
-
     # 初始化节点特征
-    # net暂时不设置feature
     pmos_feature = []
     nmos_feature = []
     r_feature = []
     c_feature = []
-
-    # bug: 网表中，如果器件接gnd，则网表显示为0；如果原理图中使用label，网表会显示label值而非net+数字的格式。
+    net_feature=[]
 
     # 遍历每个器件数据
     for i in range(0, len(devices_data), 2):
@@ -117,8 +121,14 @@ def generate_het(file_path):
                 for net in nets:
                     if net not in net_name:
                         net_name[net] = num_net
+                        if net in net_type.keys():
+                            net_feature.append([net_type.get(net)])
+                        else:
+                            net_feature.append([0])
                         num_net = num_net + 1
                     net_index.append(net_name[net])
+
+
                 # 添加边
                 edge_dp2n.append([pmos_name[pmos], net_index[0]])
                 edge_gp2n.append([pmos_name[pmos], net_index[1]])
@@ -139,6 +149,10 @@ def generate_het(file_path):
                 for net in nets:
                     if net not in net_name:
                         net_name[net] = num_net
+                        if net in net_type.keys():
+                            net_feature.append([net_type.get(net)])
+                        else:
+                            net_feature.append([0])
                         num_net = num_net + 1
                     net_index.append(net_name[net])
                 # 添加边
@@ -165,6 +179,10 @@ def generate_het(file_path):
             for net in nets:
                 if net not in net_name:
                     net_name[net] = num_net
+                    if net in net_type.keys():
+                        net_feature.append([net_type.get(net)])
+                    else:
+                        net_feature.append([0])
                     num_net = num_net + 1
                 net_index.append(net_name[net])
             # 添加边
@@ -189,6 +207,10 @@ def generate_het(file_path):
             for net in nets:
                 if net not in net_name:
                     net_name[net] = num_net
+                    if net in net_type.keys():
+                        net_feature.append([net_type.get(net)])
+                    else:
+                        net_feature.append([0])
                     num_net = num_net + 1
                 net_index.append(net_name[net])
             # 添加边
@@ -197,12 +219,12 @@ def generate_het(file_path):
 
     if num_c == 0:
         edge_c2n = [[0, 0], [0, 0]]
-        c_feature = [[0]]
+        c_feature = [[0.0]]
         num_c = 1
 
     if num_r == 0:
         edge_r2n = [[0, 0], [0, 0]]
-        r_feature = [[0]]
+        r_feature = [[0.0]]
         num_r = 1
 
     # 建立异构图
@@ -221,19 +243,19 @@ def generate_het(file_path):
     }
 
     g = dgl.heterograph(graph_data)
+    g = add_reverse_edges(g)  # 增加反向边，变成无向图。
     # 设置特征向量
     g.nodes['P'].data['x'] = th.tensor(pmos_feature)
     g.nodes['N'].data['x'] = th.tensor(nmos_feature)
     g.nodes['C'].data['x'] = th.tensor(c_feature)
     g.nodes['R'].data['x'] = th.tensor(r_feature)
-    # node 的特征向量（fan_out）
-    attributes = th.zeros((g.num_nodes('net'), 4))
-    indegrees = 0
-    for etype in g.etypes:
-        indegrees += g.in_degrees(g.nodes('net'), etype=etype)
-    attributes[:, 0] = indegrees
-    g.nodes['net'].data['x'] = attributes
-
-    g = add_reverse_edges(g)  # 增加反向边，变成无向图。
-    g.is_block = False
+    g.nodes['net'].data['x'] = th.tensor(net_feature)
     return g
+
+
+if __name__=='__main__':
+    # 用于测试generate_het函数
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    netlist_file_path = os.path.join(script_dir, 'raw_labels', 'AZC_da_1_500pF.scs')
+    hg = generate_het(netlist_file_path)
+    print(hg.nodes['net'].data['x'])
